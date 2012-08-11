@@ -1,0 +1,335 @@
+<html>
+<head>
+<title>DataFormat test</title>
+<style>
+body{
+	margin: 10px;
+}
+.container{
+	margin-left: 30px;
+	float: left;
+	width: 400px;
+}
+#tableTree{
+	border: 1px solid blue;
+	width: 100%;
+}
+#databases{
+	width: 300px;
+	float: left;
+}
+.database{
+	border: 1px solid green;
+	margin-bottom: 5px;
+	padding: 0 5px;
+}
+#dlg{
+	position: absolute;
+	border: 1px solid green;
+	display: none;
+	background-Color: #ddd;
+	left: 350px;
+	top: 100px;
+	width: 400px;
+	height: 150px;
+	padding: 20px;
+	z-index: 1;
+}
+#dlg .buttons{
+	margin-top: 10px;
+	text-align: center;
+}
+.mask{
+	z-index:0; display:none; width:100%; height:100%; background-color:#fff;
+	position:absolute; top:0px; left:0px; filter:alpha(opacity=70); opacity:0.7;
+}
+</style>
+<script type="text/javascript" src="/libs/scripts/json.js"></script>
+<script>
+var $ = function(s){
+	return (typeof s == 'object') ? s : document.getElementById(s);
+};
+function formSubmitData(action, params, datas, method){
+	if(typeof method == 'undefined') method = 'post';
+	var form = document.createElement('form');
+	form.method = 'post';
+	form.action = action;
+	for(var i = 0; i < params.length; i++){
+		var input = document.createElement('input');
+		input.type = 'hidden';
+		input.name = params[i];
+		input.value = datas[i];
+		form.appendChild(input);
+	}
+	document.body.appendChild(form);
+	form.submit();
+	form = null;
+}
+
+function Node(){
+	this.nodes = [];
+}
+Node.prototype.addNode = function(node){
+	this.nodes.push(node);
+}
+Node.prototype.getNodes = function(){
+	return this.nodes;
+}
+
+var treeHelper = {
+	// 从element获取成员变量(m_XXX)
+	copyAttributes: function(ele, obj){
+		for(var i = 0; i < ele.attributes.length; i++){
+			var prop = ele.attributes[i].nodeName;
+			if(!/^m_/.test(prop)) continue;
+			var value = ele.attributes[i].nodeValue;
+			if(obj.setAttribute)
+				obj.setAttribute(prop.substring(2), value);
+			else
+				obj[prop.substring(2)] = value;
+		}
+	},
+	// 遍历树
+	walkTree: function(ul, callback){
+		var nodes = ul.childNodes;
+		for(var i = 0; i < nodes.length; i++){
+			if(nodes[i].nodeName == 'LI'){
+				this.walkTreeNode(nodes[i], null, callback);
+			}
+		}
+	},
+	// 遍历节点
+	walkTreeNode: function(li, parent, callback){
+		if(callback(li, parent) === false) return; // 结束遍历的机制
+		var nodes = li.childNodes;
+		for(var i = 0; i < nodes.length; i++){
+			if(nodes[i].nodeName == 'UL'){
+				var items = nodes[i].childNodes;
+				for(var j = 0; j < items.length; j++){
+					if(items[j].nodeName == 'LI'){
+						this.walkTreeNode(items[j], li, callback);
+					}
+				}
+			}
+		}
+	},
+	// 查找单个节点
+	find: function(ul, filter){
+		var result = null;
+		this.walkTree(ul, function(li, parent){
+			if(filter(li, parent)){ // 找到，filter返回true
+				result = li;
+				return false;
+			}
+		});
+		return result;
+	},
+	// 查找多个节点
+	finds: function(ul, filter){
+		var result = [];
+		this.walkTree(ul, function(li, parent){
+			if(filter(li, parent)){ // 找到，filter返回true
+				result.push(li);
+			}
+		});
+		return result;
+	},
+	// 获取所有节点
+	getNodes: function(ul, filter/*=null*/){
+		var result = [];
+		this.walkTree(ul, function(li, parent){
+			if(typeof filter != 'undefined' && filter(li, parent)) return;
+			var node = new Node();
+			treeHelper.copyAttributes(li, node);
+			result.push(node);
+		});
+		return result;
+	},
+	// 获取树形结构的节点
+	getTree: function(ul, filter/*=null*/){
+		var root = new Node();
+		var nodes = ul.childNodes;
+		for(var i = 0; i < nodes.length; i++){
+			if(nodes[i].nodeName == 'LI'){
+				this.getTreeNode(nodes[i], root, filter);
+			}
+		}
+		return root;
+	},
+	getTreeNode: function(li, parent, filter/*=null*/){
+		if(typeof filter != 'undefined' && filter(li, parent)) return;
+		var node = new Node();
+		this.copyAttributes(li, node);
+		parent.addNode(node);
+		var nodes = li.childNodes;
+		for(var i = 0; i < nodes.length; i++){
+			if(nodes[i].nodeName == 'UL'){
+				var items = nodes[i].childNodes;
+				for(var j = 0; j < items.length; j++){
+					if(items[j].nodeName == 'LI'){
+						this.getTreeNode(items[j], node, filter);
+					}
+				}
+			}
+		}
+	}
+};
+var cssHelper = {
+	getStyle: function(elem, name){ // 获取最终属性值
+		if(elem.style[name])
+			return elem.style[name];
+		else if(elem.currentStyle){
+			return elem.currentStyle[name];
+		}
+		else if(document.defaultView && document.defaultView.getComputedStyle){
+			name = name.replace(/([A-Z])/g, "-$1");
+			name = name.toLowerCase();
+			var s = document.defaultView.getComputedStyle(elem, "");
+			return s && s.getPropertyValue(name);
+		}
+		else
+			return null;
+	},
+	getWindowWidth: function(){ // 获取窗口宽度
+		var de = document.documentElement;
+		return self.innerWidth ||
+			(de && de.clientWidth) ||
+			document.body.clientWidth;
+	},
+	getWindowHeight: function(){ // 获取窗口高度
+		var de = document.documentElement;
+		return self.innerHeight ||
+			(de && de.clientHeight) ||
+			document.body.clientHeight;
+	},
+	getWidth: function(ele){ // 获取元素宽度
+		return parseInt(this.getStyle(ele, 'width'));
+	},
+	getHeight: function(ele){ // 获取元素高度
+		return parseInt(this.getStyle(ele, 'height'));
+	},
+	centerElement: function(ele){ // 元素居中
+		var viewWidth = this.getWindowWidth();
+		var eleWidth = this.getWidth(ele);
+		var viewHeight = this.getWindowHeight();
+		var eleHeight = this.getHeight(ele);
+		ele.style.left = eleWidth < viewWidth ? Math.round((viewWidth - eleWidth) / 2) + 'px' : '0px';
+		ele.style.top = eleHeight < viewHeight ? Math.round((viewHeight - eleHeight) / 2) + 'px' : '0px';
+	}
+};
+
+var g = {conf: '{%$smarty.get.conf%}'};
+
+function toggleDB(link, db){
+	var ele = $(db);
+	if(ele.style.display == 'none'){
+		ele.style.display = '';
+		link.innerHTML = '-';
+	}
+	else{
+		ele.style.display = 'none';
+		link.innerHTML = '+';
+	}
+}
+
+function updateParentNodes(){
+	var nodes = treeHelper.getNodes($('tableTree'));
+	var ss = [];
+	ss.push('<select>');
+	ss.push('<option value="NULL">NULL</option>');
+	for(var i = 0; i < nodes.length; i++){
+		var node = nodes[i];
+		ss.push('<option value="' + node['uniqname'] + '">' + node['name'] + '</option>');
+	}
+	ss.push('</select>');
+	$('parentNode').innerHTML = ss.join('');
+}
+
+function addTable(tableName, uniqname){
+	$('selectedTable').innerHTML = tableName;
+	$('selectedTable').setAttribute('uniqname', uniqname);
+	updateParentNodes();
+	$('pageMask').style.height = Math.max(document.body.scrollHeight, document.body.clientHeight);
+	$('pageMask').style.display = 'block';
+	cssHelper.centerElement($('dlg'));
+	$('dlg').style.display = 'block';
+}
+
+function doAddTableFromDlg(){
+	var dlg = $('dlg');
+	var tableName = $('selectedTable').innerHTML;
+	var uniqname = $('selectedTable').getAttribute('uniqname');
+	var parentName = $('parentNode').getElementsByTagName('select')[0].value;
+
+	var li = document.createElement('li');
+	li.setAttribute('m_name', tableName);
+	li.setAttribute('m_uniqname', uniqname);
+	li.innerHTML = tableName + ' <a href="###" onclick="deleteNode(this.parentNode)">X</a><ul></ul>';
+
+	var parent = treeHelper.find($('tableTree'), function(li, parent){
+		return li.getAttribute('m_uniqname') == parentName;
+	});
+	if(parent != null){
+		parent.getElementsByTagName('ul')[0].appendChild(li);
+	}
+	else
+		$('tableTree').appendChild(li);
+
+	doCloseDlg();
+}
+
+function doCloseDlg(){
+	$('dlg').style.display = 'none';
+	$('pageMask').style.display = 'none';
+}
+
+function deleteNode(li){
+	li.parentNode.removeChild(li);
+}
+
+function goDataFormatDefine(){
+	var root = treeHelper.getTree($('tableTree'));
+	if(root.getNodes().length == 0){
+		alert('请先定义表间关系');
+		return;
+	}
+	var url = '?_action=define&conf=' + g.conf;
+	formSubmitData(url, ['tables'], [root.toJSONString()]);
+}
+</script>
+
+</head>
+<body>
+<a href="?">返回数据格式列表</a>
+<hr>
+
+<div id="dlg">
+	添加表：<span id="selectedTable"></span>
+	<br>
+	父节点：<span id="parentNode"></span>
+	<br>
+	<div class="buttons">
+		<input type="button" value="添加" onclick="doAddTableFromDlg()">
+		<input type="button" value="关闭" onclick="doCloseDlg()">
+	</div>
+</div>
+
+<div id="databases">
+{%foreach from=$databases key=dbinx item=db%}
+	<div class="database">
+	<h2><a href="###" style="text-decoration:none;" onclick="toggleDB(this, 'db_{%$dbinx%}')">-</a> {%$db.name%}</h2>
+	<ul id="db_{%$dbinx%}">
+	{%foreach from=$db.tables item=table%}
+		<li>{%$table.name%} <a href="javascript:addTable('{%$table.name%}', '{%$table.uniqname%}')">add</a></li>
+	{%/foreach%}
+	</ul>
+	</div>
+{%/foreach%}
+</div>
+<div class="container">
+<ul id="tableTree">{%$data.treeString%}</ul>
+<a href="javascript:goDataFormatDefine();">下一步</a>
+</div>
+<div id="pageMask" class="mask"></div>
+</body>
+</html>

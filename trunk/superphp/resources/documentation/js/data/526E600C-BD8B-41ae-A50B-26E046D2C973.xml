@@ -1,0 +1,4 @@
+tocTab[tocTab.length] = new Array("2:1", "", "Auth", "EARoot/EA2/EA66.htm", "175.png", "57", "0", "", "Logical diagram");
+tocTab[tocTab.length] = new Array("2:2", "", "SOSO_Auth_Decorator", "EARoot/EA2/EA68.htm", "5.png", "210", "0", "", "Class");
+tocTab[tocTab.length] = new Array("2:3", "", "«interface» SOSO_Auth_Interface", "EARoot/EA2/EA69.htm", "8.png", "211", "0", "", "Interface");
+tocTab[tocTab.length] = new Array("2:4", "", "SOSO_Auth_Oss", "EARoot/EA2/EA70.htm", "5.png", "212", "0", "", "Class");

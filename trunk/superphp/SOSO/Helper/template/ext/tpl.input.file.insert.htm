@@ -1,0 +1,23 @@
+<script>
+	function fclick(obj,e){
+		var event = e || window.event;
+		var ele = event.srcElement || event.target;
+  	obj.style.top = ele.offsetTop;
+  	var x = event.x-ele.offsetWidth/2;
+  	if(x<ele.offsetLeft)x=ele.offsetLeft;
+  	if(x>ele.offsetLeft+ele.offsetWidth-ele.offsetWidth)x=ele.offsetLeft+ele.offsetWidth-ele.offsetWidth;
+  	ele.style.offsetLeft = x;
+  	
+    /*style.posTop=event.srcElement.offsetTop
+    var x=event.x-offsetWidth/2
+    if(x<event.srcElement.offsetLeft)x=event.srcElement.offsetLeft
+    if(x>event.srcElement.offsetLeft+event.srcElement.offsetWidth-offsetWidth)x=event.srcElement.offsetLeft+event.srcElement.offsetWidth-offsetWidth
+    style.posLeft=x
+    */
+}
+</script>
+<form name="form1" enctype="multipart/form-data">
+<input id="f_file">&nbsp;<input type="button" onmouseover="fclick(t_file)" value="选择上传文件">
+<input name="upload" type="file" style="position:absolute;filter:alpha(opacity=40);width:30px;" id="t_file" onchange="f_file.value=this.value" hidefocus>
+<input type="submit" value="submit" />
+</form>

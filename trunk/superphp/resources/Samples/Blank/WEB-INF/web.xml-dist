@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project>
+    <system>
+        <class>class</class>
+        <temp>temp</temp>
+        <template>template</template>
+        <cache>cache</cache>
+    </system>
+    <databases>
+        <database type="MySQL" host="10.1.146.158" port="3306" username="stat" password="statpassword" socket="" database="test" emulatePrepare="1" />
+        <location path="/usr/local/mysql"/>
+    </databases>
+    <phpbin>/usr/local/bin/php</phpbin>
+    <pages cache="false"/>
+    <permission complexVerify="false"/>
+</project>

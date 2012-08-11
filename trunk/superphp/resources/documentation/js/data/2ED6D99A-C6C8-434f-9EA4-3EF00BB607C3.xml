@@ -1,0 +1,4 @@
+tocTab[tocTab.length] = new Array("15:1", "", "Proxy", "EARoot/EA15/EA196.htm", "175.png", "76", "0", "", "Logical diagram");
+tocTab[tocTab.length] = new Array("15:2", "", "SOSO_Proxy_Client", "EARoot/EA15/EA198.htm", "5.png", "315", "0", "", "Class");
+tocTab[tocTab.length] = new Array("15:3", "", "SOSO_Proxy_Server", "EARoot/EA15/EA199.htm", "5.png", "317", "0", "", "Class");
+tocTab[tocTab.length] = new Array("15:4", "", "SOSO_ProxyFactory", "EARoot/EA15/EA200.htm", "5.png", "316", "0", "", "Class");

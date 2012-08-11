@@ -1,0 +1,9 @@
+<?PHP
+//开始项目时，请删下面语句
+echo "Please check this entry.php !";exit;
+//项目名
+define('APP_NAME','#PROJECTNAME#');
+require_once("#LIBPATH#/SOSO/SOSO.php");
+$soso = new SOSO();
+$soso->Serve();
+?>

@@ -1,0 +1,39 @@
+<PUBLIC:PROPERTY NAME="mPageCount" />
+<PUBLIC:PROPERTY NAME="prefix_path" />
+<PUBLIC:PROPERTY NAME="prefix_url" />
+<PUBLIC:PROPERTY NAME="selected" />
+<PUBLIC:ATTACH EVENT="ondocumentready" ONEVENT="init()" />
+
+<SCRIPT LANGUAGE="JScript">
+var oFirstPage;
+var oPreviousPage;
+var oImagePath = "/libs/images/list/";
+function init()
+{
+	if(mPage==mFirstPage)
+	{
+		oFirstPage = "<img height=\"15\" alt=\"\" src=\""+oImagePath+"btnFirst2.gif\" width=\"15\" border=\"0\">";
+		oPreviousPage = "<img height=\"15\" alt=\"\" src=\""+oImagePath+"btnPrev2.gif\" width=\"15\" border=\"0\">";
+	}
+	else
+	{
+		oFirstPage = "<a title=\"1\" href=\""+prefix_url+"&_page="+mFirstPage+"\"> <img height=\"15\" alt=\"\" src=\""+oImagePath+"btnFirst1.gif\" width=\"15\" border=\"0\"></a>";
+		oPreviousPage = "<a title=\"2\" href=\""+prefix_url+"&_page="+mPreviousPage+"\"> <img height=\"15\" alt=\"\" src=\""+oImagePath+"btnPrev1.gif\" width=\"15\" border=\"0\"></a>";
+	}
+	if(mPage==mPageCount)
+	{
+		oPageCount = "<img id=\"btn\" height=\"15\" alt=\"\" src=\""+oImagePath+"btnLast2.gif\" width=\"15\" border=\"0\">";
+		oNextPage = "<img id=\"btn\" height=\"15\" alt=\"\" src=\""+oImagePath+"btnNext2.gif\" width=\"15\" border=\"0\">";
+	}
+	else
+	{
+		oPageCount = "<a title=\"3\" href=\""+prefix_url+"&_page="+mPageCount+"\"> <img id=\"btn\" height=\"15\" alt=\"\" src=\""+oImagePath+"btnLast1.gif\" width=\"15\" border=\"0\"></a>";
+		oNextPage = "<a title=\"4\" href=\""+prefix_url+"&_page="+mNextPage+"\"> <img id=\"btn\" height=\"15\" alt=\"\" src=\""+oImagePath+"btnNext1.gif\" width=\"15\" border=\"0\"></a>";
+	}    write();
+}
+
+function write()
+{
+    element.innerHTML = "<table class=\"lch\" cellSpacing=\"0\" cellPadding=\"0\" id=\"table11\"><tr> \n        <td vAlign=\"top\"> <img height=\"17\" alt=\"\" src=\""+oImagePath+"l.gif\" width=\"10\" border=\"0\"></td> \n        <td width=\"100%\"> <table cellSpacing=\"3\" cellPadding=\"0\" id=\"table12\"> \n            <tr> \n			  <td class=\"c\" noWrap>&#31532;"+mPage+"/"+mPageCount+"&#39029;</td> \n              <td><img width='6' height='15' border='0' alt='' src='"+oImagePath+"bullet.gif'></td> \n              <td class=\"c\" noWrap>&#20849;&#26377;"+mRecordCount+"&#26465;&#35760;&#24405;/&#31532;"+mStartRecord+"-"+mEndRecord+"&#26465;&#35760;&#24405;</td><td width=\"100%\" align='center'></td> \n              <td> </td> \n              <td> <a title=\"Ë¢ÐÂÁÐ±í\" href=\"javascript:void(location.reload())\"> <img id=\"btn\" height=\"15\" alt=\"\" src=\""+oImagePath+"btnRefresh1.gif\" width=\"15\" border=\"0\"></a></td><td> "+oFirstPage+"</td><td> "+oPreviousPage+"</td><td> "+oNextPage+"</td><td> "+oPageCount+"</td></tr> \n          </table></td> \n        <td vAlign=\"top\"> <img height=\"17\" alt=\"\" src=\""+oImagePath+"r.gif\" width=\"10\" border=\"0\"></td> \n      </tr></table>";
+}
+</SCRIPT>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project mode="debug">
+    <system>
+        <class>class</class>
+        <temp>temp</temp>
+        <template>template</template>
+        <cache>cache</cache>
+    </system>
+    <databases>
+        <location path="/usr/local/mysql"/>
+	<database Persistent="false" type="MySQL" host="localhost" port="3306" username="root" password="" socket="/tmp/mysql.sock" database="for_test"/>
+    </databases>
+	<params>
+		<param name="hello" value="world" />
+		<param name="test" value="world" />
+	</params>
+	
+	<params name="configed" value="super">
+		<param name="configed" value="super php framework" />
+		<param name="cache" value="cache2" />
+	</params>
+    <phpbin>/usr/local/bin/php</phpbin>
+    <pages cache="false"/>
+    <permission complexVerify="false"/>
+</project>

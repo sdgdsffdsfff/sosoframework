@@ -1,0 +1,9 @@
+tocTab[tocTab.length] = new Array("3.4:1", "", "Util", "EARoot/EA3/EA4/EA104.htm", "175.png", "62", "0", "", "Logical diagram");
+tocTab[tocTab.length] = new Array("3.4:2", "", "Pseudos", "EARoot/EA3/EA4/EA106.htm", "5.png", "237", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.4:3", "", "SOSO_Base_Util_DomQuery", "EARoot/EA3/EA4/EA107.htm", "5.png", "236", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.4:4", "", "SOSO_Base_Util_Event", "EARoot/EA3/EA4/EA108.htm", "5.png", "238", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.4:5", "", "SOSO_Base_Util_JsonQuery", "EARoot/EA3/EA4/EA109.htm", "5.png", "239", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.4:6", "", "SOSO_Base_Util_Observable", "EARoot/EA3/EA4/EA110.htm", "5.png", "240", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.4:7", "", "SOSO_Base_Util_Observer", "EARoot/EA3/EA4/EA111.htm", "5.png", "241", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.4:8", "", "SOSO_Base_Util_Regexp", "EARoot/EA3/EA4/EA112.htm", "5.png", "242", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.4:9", "", "SOSO_Base_Util_XMLQuery", "EARoot/EA3/EA4/EA113.htm", "5.png", "243", "0", "", "Class");

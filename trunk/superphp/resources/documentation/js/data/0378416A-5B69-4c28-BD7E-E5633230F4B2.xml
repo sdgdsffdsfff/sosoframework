@@ -1,0 +1,2 @@
+tocTab[tocTab.length] = new Array("3.3:1", "", "Exceptions", "EARoot/EA3/EA3/EA101.htm", "175.png", "61", "0", "", "Logical diagram");
+tocTab[tocTab.length] = new Array("3.3:2", "", "SOSO_Base_Exceptions_File", "EARoot/EA3/EA3/EA103.htm", "5.png", "234", "0", "", "Class");

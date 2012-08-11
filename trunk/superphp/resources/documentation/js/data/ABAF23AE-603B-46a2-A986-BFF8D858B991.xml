@@ -1,0 +1,11 @@
+tocTab[tocTab.length] = new Array("17:1", "", "Util", "EARoot/EA17/EA206.htm", "175.png", "78", "0", "", "Logical diagram");
+tocTab[tocTab.length] = new Array("17:2", "", "SOSO_Util_File", "EARoot/EA17/EA208.htm", "5.png", "323", "0", "", "Class");
+tocTab[tocTab.length] = new Array("17:3", "", "SOSO_Util_Http", "EARoot/EA17/EA209.htm", "5.png", "324", "0", "", "Class");
+tocTab[tocTab.length] = new Array("17:4", "", "SOSO_Util_Pagination", "EARoot/EA17/EA210.htm", "5.png", "325", "0", "", "Class");
+tocTab[tocTab.length] = new Array("17:5", "", "SOSO_Util_ParserKit", "EARoot/EA17/EA211.htm", "5.png", "326", "0", "", "Class");
+tocTab[tocTab.length] = new Array("17:6", "", "SOSO_Util_Permission", "EARoot/EA17/EA212.htm", "5.png", "327", "0", "", "Class");
+tocTab[tocTab.length] = new Array("17:7", "", "SOSO_Util_Signature", "EARoot/EA17/EA213.htm", "5.png", "328", "0", "", "Class");
+tocTab[tocTab.length] = new Array("17:8", "", "SOSO_Util_SqlCache", "EARoot/EA17/EA214.htm", "5.png", "329", "0", "", "Class");
+tocTab[tocTab.length] = new Array("17:9", "", "SOSO_Util_String", "EARoot/EA17/EA215.htm", "5.png", "330", "0", "", "Class");
+tocTab[tocTab.length] = new Array("17:10", "", "SOSO_Util_Util", "EARoot/EA17/EA216.htm", "5.png", "331", "0", "", "Class");
+tocTab[tocTab.length] = new Array("17:11", "", "SOSO_Util_XMLCommand", "EARoot/EA17/EA217.htm", "5.png", "332", "0", "", "Class");

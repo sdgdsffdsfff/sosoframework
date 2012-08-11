@@ -1,0 +1,17 @@
+<?php
+/**
+ * @author moonzhang (moonzhang@tencent.com)
+ * @version v 1.0 {$date}
+ * @package Page_Admin
+ * 
+ */
+class Page_Admin_{$class_name} extends SOSO_ORM_TableAdmin {literal}{{/literal}
+	public function __construct() {literal}{{/literal}
+		parent::__construct("{$table_name}",{$db_offset});
+	{literal}}
+	
+	public function afterList(&$pList){
+		return $pList;	
+	}
+}{/literal}
+?>

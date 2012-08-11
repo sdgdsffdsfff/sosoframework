@@ -1,0 +1,29 @@
+<table cellSpacing="0" cellPadding="0" align="center">
+  <tr>
+  
+  <form action="" method="get" name="form1">
+    <td id="searcherPager" prefix_url='?{ldelim}$_url{rdelim}'  {literal}{$page_htc}{/literal}><script>oPages.push('searcherPager');</script></td>
+    </tr>
+    <tr>
+      <td><table class="lcb" cellSpacing="0" cellPadding="5" width="100%" border="0">
+          <tr>
+            <td><table border="0" cellSpacing="0" cellPadding="0" width="100%">
+                {section name=rows loop=$config} {if $config[rows].search}
+                <tr>
+                  <td class='leftheader'>{$config[rows].comment}</td>
+                  <td>{include file=$config[rows].file}</td>
+                </tr>
+                {/if} {/section}
+                <tr>
+                	<td class='leftheader'>{"²Ù×÷"|unicode}</td>
+                  <td align="center"><input type="submit" value="{"ËÑË÷"|unicode}" id="submit">
+                    <input type="reset" value="{"ÖØÖÃ"|unicode}" id="reset"><input type="hidden" name="_action" value="search"></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table></td>
+  </form>
+  </tr>
+  
+</table><br>
+{include file="base/tpl.list.htm"}

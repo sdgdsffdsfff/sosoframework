@@ -1,0 +1,7 @@
+
+<div id="{$config[rows].name}Wrapper"></div>
+<script>
+	var cCreateTime = widgets.createDate(null,null,"{$config[rows].name}",null,'Y-m-d','{$config[rows].name}Wrapper');
+	cCreateTime.format = 'Y-m-d H:i:s';
+	cCreateTime.setValue('{ldelim}${$config[rows].name}{rdelim}');
+</script>

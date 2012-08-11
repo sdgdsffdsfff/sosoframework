@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>数据格式列表</title>
+<script type="text/javascript" src="/libs/scripts/ajax.js"></script>
+<script>
+function deleteConf(conf){
+	if(confirm('您确实要删除"' + conf + '"？')){
+		var url = '?_action=delete&conf=' + conf;
+		ajaxRequest(url, function(s){
+			document.location.reload();
+		});
+	}
+}
+</script>
+<style>
+table{
+	border-collapse:collapse;
+}
+td, th{
+	background:#eee none repeat scroll 0 0;
+	border:1px solid black;
+	overflow:hidden;
+	padding:5px;
+	text-align:center;
+	vertical-align:middle;
+}
+</style>
+</head>
+<body>
+<table width="50%">
+	<tr>
+		<th>格式</th>
+		<th>xml</th>
+		<th>xsd</th>
+		<th>操作</th>
+	</tr>
+	{%foreach from=$confs item=conf%}
+	<tr>
+		<td><a href="?_action=config&conf={%$conf|escape:"url"%}">{%$conf%}</a></td>
+		<td><a target="_blank" href="?_action=view&type=xml&conf={%$conf|escape:"url"%}">xml</a></td>
+		<td><a target="_blank" href="?_action=view&type=xsd&conf={%$conf|escape:"url"%}">xsd</a></td>
+		<td><a href="javascript:deleteConf('{%$conf%}')">删除</a></td>
+	</tr>
+	{%/foreach%}
+</table>
+<br>
+<a href="?_action=config">创建数据格式</a>
+</body>
+</html>

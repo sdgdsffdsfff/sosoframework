@@ -1,0 +1,17 @@
+tocTab[tocTab.length] = new Array("3.2:1", "", "Data", "EARoot/EA3/EA2/EA83.htm", "175.png", "60", "0", "", "Logical diagram");
+tocTab[tocTab.length] = new Array("3.2:2", "", "SOSO_Base_Data_ArrayReader", "EARoot/EA3/EA2/EA85.htm", "5.png", "217", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.2:3", "", "SOSO_Base_Data_Collection", "EARoot/EA3/EA2/EA86.htm", "5.png", "218", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.2:4", "", "SOSO_Base_Data_Connection", "EARoot/EA3/EA2/EA87.htm", "5.png", "219", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.2:5", "", "SOSO_Base_Data_DataField", "EARoot/EA3/EA2/EA88.htm", "5.png", "220", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.2:6", "", "SOSO_Base_Data_DataFormat", "EARoot/EA3/EA2/EA89.htm", "5.png", "221", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.2:7", "", "SOSO_Base_Data_DataFormatBuilder", "EARoot/EA3/EA2/EA90.htm", "5.png", "222", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.2:8", "", "SOSO_Base_Data_DataFormatNode", "EARoot/EA3/EA2/EA91.htm", "5.png", "223", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.2:9", "", "SOSO_Base_Data_JSONReader", "EARoot/EA3/EA2/EA92.htm", "5.png", "224", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.2:10", "", "SOSO_Base_Data_Memory", "EARoot/EA3/EA2/EA93.htm", "5.png", "225", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.2:11", "", "SOSO_Base_Data_Proxy", "EARoot/EA3/EA2/EA94.htm", "5.png", "226", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.2:12", "", "SOSO_Base_Data_ProxyRelay", "EARoot/EA3/EA2/EA95.htm", "5.png", "227", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.2:13", "", "SOSO_Base_Data_Reader", "EARoot/EA3/EA2/EA96.htm", "5.png", "228", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.2:14", "", "SOSO_Base_Data_Record", "EARoot/EA3/EA2/EA97.htm", "5.png", "229", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.2:15", "", "SOSO_Base_Data_Store", "EARoot/EA3/EA2/EA98.htm", "5.png", "230", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.2:16", "", "SOSO_Base_Data_Writer", "EARoot/EA3/EA2/EA99.htm", "5.png", "231", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.2:17", "", "SOSO_Base_Data_XMLReader", "EARoot/EA3/EA2/EA100.htm", "5.png", "232", "0", "", "Class");

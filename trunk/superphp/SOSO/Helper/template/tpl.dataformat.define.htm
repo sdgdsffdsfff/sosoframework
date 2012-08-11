@@ -1,0 +1,348 @@
+<html>
+<head>
+<title>定义数据格式</title>
+<script type="text/javascript" src="/libs/scripts/json.js"></script>
+<script type="text/javascript" src="/libs/scripts/ajax.js"></script>
+<script>
+var $ = function(s){
+	return (typeof s == 'object') ? s : document.getElementById(s);
+};
+function Node(){
+	this.nodes = [];
+}
+Node.prototype.addNode = function(node){
+	this.nodes.push(node);
+}
+Node.prototype.getNodes = function(){
+	return this.nodes;
+}
+var treeHelper = {
+	// 从element获取成员变量(m_XXX)
+	copyAttributes: function(ele, obj){
+		for(var i = 0; i < ele.attributes.length; i++){
+			var prop = ele.attributes[i].nodeName;
+			if(!/^m_/.test(prop)) continue;
+			var value = ele.attributes[i].nodeValue;
+			if(obj.setAttribute)
+				obj.setAttribute(prop.substring(2), value);
+			else
+				obj[prop.substring(2)] = value;
+		}
+	},
+	// 遍历树
+	walkTree: function(ul, callback){
+		var nodes = ul.childNodes;
+		for(var i = 0; i < nodes.length; i++){
+			if(nodes[i].nodeName == 'LI'){
+				this.walkTreeNode(nodes[i], null, callback);
+			}
+		}
+	},
+	// 遍历节点
+	walkTreeNode: function(li, parent, callback){
+		if(callback(li, parent) === false) return; // 结束遍历的机制
+		var nodes = li.childNodes;
+		for(var i = 0; i < nodes.length; i++){
+			if(nodes[i].nodeName == 'UL'){
+				var items = nodes[i].childNodes;
+				for(var j = 0; j < items.length; j++){
+					if(items[j].nodeName == 'LI'){
+						this.walkTreeNode(items[j], li, callback);
+					}
+				}
+			}
+		}
+	},
+	// 查找单个节点
+	find: function(ul, filter){
+		var result = null;
+		this.walkTree(ul, function(li, parent){
+			if(filter(li, parent)){ // 找到，filter返回true
+				result = li;
+				return false;
+			}
+		});
+		return result;
+	},
+	// 查找多个节点
+	finds: function(ul, filter){
+		var result = [];
+		this.walkTree(ul, function(li, parent){
+			if(filter(li, parent)){ // 找到，filter返回true
+				result.push(li);
+			}
+		});
+		return result;
+	},
+	// 获取所有节点
+	getNodes: function(ul, filter/*=null*/){
+		var result = [];
+		this.walkTree(ul, function(li, parent){
+			if(typeof filter != 'undefined' && filter(li, parent)) return;
+			var node = new Node();
+			treeHelper.copyAttributes(li, node);
+			result.push(node);
+		});
+		return result;
+	},
+	// 获取树形结构的节点
+	getTree: function(ul, filter/*=null*/){
+		var root = new Node();
+		var nodes = ul.childNodes;
+		for(var i = 0; i < nodes.length; i++){
+			if(nodes[i].nodeName == 'LI'){
+				this.getTreeNode(nodes[i], root, filter);
+			}
+		}
+		return root;
+	},
+	getTreeNode: function(li, parent, filter/*=null*/){
+		if(typeof filter != 'undefined' && filter(li, parent)) return;
+		var node = new Node();
+		this.copyAttributes(li, node);
+		parent.addNode(node);
+		var nodes = li.childNodes;
+		for(var i = 0; i < nodes.length; i++){
+			if(nodes[i].nodeName == 'UL'){
+				var items = nodes[i].childNodes;
+				for(var j = 0; j < items.length; j++){
+					if(items[j].nodeName == 'LI'){
+						this.getTreeNode(items[j], node, filter);
+					}
+				}
+			}
+		}
+	}
+};
+function swapElement(left, right){
+	if(left == null || right == null) return;
+	// 内容
+	var s = left.innerHTML;
+	left.innerHTML = right.innerHTML;
+	right.innerHTML = s;
+	// 属性
+	for(var i = 0; i < left.attributes.length; i++){
+		var prop = left.attributes[i].nodeName;
+		if(!/^m_/.test(prop)) continue;
+		var tmp = left.getAttribute(prop);
+		left.setAttribute(prop, right.getAttribute(prop));
+		right.setAttribute(prop, tmp);
+	}
+}
+function onlyInt(event){
+	event = event || window.event;
+	var code = event.keyCode ? event.keyCode : event.charCode;
+	return code >= 48 && code <= 57;
+}
+
+var g = {currNode: null, currLink: null, tables: {%$data.tables%}, eles: []};
+g.editableFields = [
+	'alias', 'datatype', 'asattribute', 'defaultvalue', 'maxoccurs', 'minoccurs', 
+	'pattern', 'maxlength', 'minlength', 'fixed'
+];
+
+function init(){
+	for(var i = 0; i < g.editableFields.length; i++){
+		var key = 'ele_' + g.editableFields[i];
+		g.eles[key] = $(key);
+	}
+	// 默认选中第一条
+	var lis = $('tree').getElementsByTagName('li');
+	if(lis.length > 0){
+		editProperty(lis[0]);
+	}
+}
+
+function editProperty(li){
+	if(g.currLink != null) g.currLink.className = '';
+	var link = li.getElementsByTagName('a')[0];
+	g.currNode = li;
+	g.currLink = link;
+	link.className = 'selected';
+
+	$('ele_name').innerHTML = g.currNode.getElementsByTagName('a')[0].innerHTML;
+	for(var i = 0; i < g.editableFields.length; i++){
+		var field = g.editableFields[i];
+		g.eles['ele_' + field].value = g.currNode.getAttribute('m_' + field);
+	}
+	// 作为属性
+	showAsAttribute(g.currNode.getAttribute('m_asattribute') == '1');
+	// 作为容器
+	showContainer(g.currNode.getAttribute('m_datatype') == 'container');
+}
+
+function saveProperty(){
+	if(g.currNode == null) return;
+	// 验证数据合法性
+	var minOccurs = $('ele_minoccurs').value == '' ? 1 : parseInt($('ele_minoccurs').value);
+	var maxOccurs = $('ele_maxoccurs').value == '' ? 1 : parseInt($('ele_maxoccurs').value);
+	if(minOccurs > maxOccurs){
+		alert("最小出现次数 不能大于 最大出现错误\n\n修改失败！");
+		return;
+	}
+	var minLength = $('ele_minlength').value == '' ? -1 : parseInt($('ele_minlength').value);
+	var maxLength = $('ele_maxlength').value == '' ? -1 : parseInt($('ele_maxlength').value);
+	if(maxLength != -1 && minLength != -1 && minLength > maxLength){
+		alert("最小长度 不能大于 最大长度\n\n修改失败！");
+		return;
+	}
+	
+	for(var i = 0; i < g.editableFields.length; i++){
+		var field = g.editableFields[i];
+		g.currNode.setAttribute('m_' + field, g.eles['ele_' + field].value);
+	}
+	alert('修改节点信息成功');
+}
+function saveDataFormat(){
+	var root = treeHelper.getTree($('tree'), function(li, parent){
+		return !li.getElementsByTagName('input')[0].checked;
+	});
+	if(root.getNodes().length == 0){
+		alert('没有选中节点，不能保存');
+		return;
+	}
+	var url = '?_action=save';
+	var data = 'data=' + root.getNodes()[0].toJSONString() + '&tables=' + g.tables.toJSONString();
+	ajaxRequest(url, function(s){
+		alert(s);
+	}, data, 'gbk');
+}
+
+function moveUp(li){
+	swapNode(li, li.previousSibling);
+}
+
+function moveDown(li){
+	swapNode(li, li.nextSibling);
+}
+
+function swapNode(left, right){
+	swapElement(left, right);
+	// 当前选中
+	if(g.currNode == left){
+		g.currNode = right;
+		g.currLink = right.getElementsByTagName('a')[0];
+	}
+	else if(g.currNode == right){
+		g.currNode = left;
+		g.currLink = left.getElementsByTagName('a')[0];
+	}
+}
+
+function selectAsAttribute(select){
+	showAsAttribute(select.value == '1');
+}
+function selectDataType(select){
+	showContainer(select.value == 'container');
+}
+// 作为属性
+function showAsAttribute(enable){
+	$('tr_maxoccurs').style.display = enable ? 'none' : '';
+	$('tr_minoccurs').style.display = enable ? 'none' : '';
+}
+function showContainer(enable){
+	// 作为容器，不可编辑值属性
+	$('tr_maxlength').style.display = enable ? 'none' : '';
+	$('tr_minlength').style.display = enable ? 'none' : '';
+	$('tr_pattern').style.display = enable ? 'none' : '';
+	$('tr_defaultvalue').style.display = enable ? 'none' : '';
+	$('tr_fixed').style.display = enable ? 'none' : '';
+	$('tr_asattribute').style.display = enable ? 'none' : '';
+}
+
+window.onload = function(){
+	init();
+}
+</script>
+
+<style>
+ul{ list-style-type:none; }
+#tree{
+	border: 1px solid green;
+	float: left;
+	padding: 5px;
+}
+#tree .selected{
+	background-color: #ccc;
+	color: blue;
+}
+#properties{
+	border: 1px solid green;
+	float: left;
+	margin-left: 100px;
+	width: 450px;
+}
+</style>
+</head>
+<body>
+<ul id="tree">
+	{%$data.treeString%}
+</ul>
+<div id="properties">
+	<table>
+		<tr>
+			<td>名称：</td>
+			<td><span id="ele_name">请选择节点</span></td>
+		</tr>
+		<tr>
+			<td>别名：</td>
+			<td><input id="ele_alias" type="text" value=""></td>
+		</tr>
+		<tr>
+			<td>数据类型：</td>
+			<td><select id="ele_datatype" onchange="selectDataType(this)">
+				<option value="string">字符串(string)</option>
+				<option value="integer">整型(integer)</option>
+				<option value="decimal">十进制(decimal)</option>
+				<option value="boolean">布尔型(boolean)</option>
+				<option value="float">单精度浮点数(float)</option>
+				<option value="double">双精度浮点数(double)</option>
+				<option value="date">日期(date)</option>
+				<option value="time">时间(time)</option>
+				<option value="dateTime">日期+时间(datetime)</option>
+				<option value="anyURI">网址(anyURI)</option>
+				<option value="container">容器</option>
+			</select></td>
+		</tr>
+		<tr id="tr_asattribute">
+			<td>作为属性：</td>
+			<td><select id="ele_asattribute" onchange="selectAsAttribute(this)"><option value="0">否</option><option value="1">是</option></select></td>
+		</tr>
+		<tr id="tr_defaultvalue">
+			<td>缺省值(default)：</td>
+			<td><input id="ele_defaultvalue" type="text" value="" /></td>
+		</tr>
+		<tr id="tr_maxoccurs">
+			<td>最大出现次数(maxOccurs)：</td>
+			<td><input id="ele_maxoccurs" type="text" value="1" onkeypress="return onlyInt(event)" /></td>
+		</tr>
+		<tr id="tr_minoccurs">
+			<td>最小出现次数(minOccurs)：</td>
+			<td><input id="ele_minoccurs" type="text" value="1" onkeypress="return onlyInt(event)" /></td>
+		</tr>
+		<tr id="tr_fixed">
+			<td>固定值(fixed)：</td>
+			<td><input id="ele_fixed" type="text" value="" /></td>
+		</tr>
+		<tr id="tr_maxlength">
+			<td>最大长度(maxLength)：</td>
+			<td><input id="ele_maxlength" type="text" value="" onkeypress="return onlyInt(event)" /></td>
+		</tr>
+		<tr id="tr_minlength">
+			<td>最小长度(minLength)：</td>
+			<td><input id="ele_minlength" type="text" value="" onkeypress="return onlyInt(event)" /></td>
+		</tr>
+		<tr id="tr_pattern">
+			<td>值模式(pattern)：</td>
+			<td><input id="ele_pattern" type="text" value="" /></td>
+		</tr>
+	</table>
+	<div class="buttons">
+		<input type="button" onclick="saveProperty()" value="确定" />
+	</div>
+</div>
+<div style="clear:both" />
+<a href="javascript:saveDataFormat()">保存！</a>
+<br/><br/>
+<a href="?" target="_blank">数据格式列表</a>
+</body>

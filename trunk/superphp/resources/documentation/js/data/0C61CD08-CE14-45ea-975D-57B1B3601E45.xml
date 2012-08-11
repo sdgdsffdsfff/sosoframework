@@ -1,0 +1,6 @@
+tocTab[tocTab.length] = new Array("9:1", "", "DB", "EARoot/EA9/EA158.htm", "175.png", "69", "0", "", "Logical diagram");
+tocTab[tocTab.length] = new Array("9:2", "", "«interface» SOSO_DB_Abstract", "EARoot/EA9/EA161.htm", "8.png", "287", "0", "", "Interface");
+tocTab[tocTab.length] = new Array("9:3", "", "SOSO_DB_Factory", "EARoot/EA9/EA162.htm", "5.png", "288", "0", "", "Class");
+tocTab[tocTab.length] = new Array("9:4", "", "SOSO_DB_Iterator", "EARoot/EA9/EA163.htm", "5.png", "289", "0", "", "Class");
+tocTab[tocTab.length] = new Array("9:5", "", "SOSO_DB_SQLCommand", "EARoot/EA9/EA164.htm", "5.png", "290", "0", "", "Class");
+tocTab[tocTab.length] = new Array("9.1", "1", "Driver", "EARoot/EA9/EA160.htm", "4.png", "", "", "{E45786ED-253F-4998-9235-898316B71CD6}", "Package");

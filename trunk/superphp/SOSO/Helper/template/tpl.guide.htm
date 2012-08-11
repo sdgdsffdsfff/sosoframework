@@ -1,0 +1,16 @@
+<h1 class="header">Table Admin:{$_table}&#34920;</h1>
+<ul id="nav">
+  <li{if $_action eq "insert"} id="current"{/if}><a href="?{$qsa}&_action=insert">&#25554;&#20837;</a>
+  </li>
+  <li{if $_action eq "update"} id="current"{/if}><a {if $_action eq 'select'} href="?{$smarty.server.QUERY_STRING|replace:"_action=select":""}&_action=update"{/if}>&#26356;&#26032;</a>
+  </li>
+  <li{if $_action eq "select"} id="current"{/if}><a {if $_action eq 'update'} href="?{$smarty.server.QUERY_STRING|replace:"_action=update":""}&_action=select"{/if}>&#26597;&#30475;</a>
+  </li>
+  <li{if $_action eq "search"} id="current"{/if}><a href="?{$qsa}&_action=search">&#25628;&#32034;</a>
+  </li>
+  <li{if $_action eq "list"} id="current"{/if}><a href="?{$qsa}&_action=list">&#21015;&#34920;</a>
+  </li>
+</ul>
+<div style="float:right;margin-right:10px">{if $_user}{$_user.username}({$_user.ChineseName}){/if}</div>
+<br>
+<br>

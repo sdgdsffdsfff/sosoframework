@@ -1,0 +1,2273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>ORM::SOSO_ORM_TableObject</title>
+<link href="../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">SOSO_ORM_TableObject  : public   class</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">2009-7-22 11:03:46</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">2009-11-2 12:33:12</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue">moonzhang</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">Proposed</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Easy</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{F804BD98-75C9-46c0-9A1A-0B9274DB4B37}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA191.htm">ORM</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">SOSO Framework <br />@category   SOSO<br />@package    SOSO_ORM<br />@copyright  Copyright (c) 2007-2008 Soso.com<br /></div>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('Attributes');" id="AttributesTitle">Attributes</li>
+			<li onClick="parent.toggleItem('Operations');" id="OperationsTitle">Operations</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+<div class="ItemBody" id="AttributesTable">
+	<table border="0" cellspacing="0" cellpadding="0" class="Table">
+		<tr>
+			<td width="40%" class="TableHeading">Attribute</td>
+			<td width="60%" class="TableHeading">Details</td>
+		</tr>
+						<tr>
+				<td width="40%" class="TableRow" valign="top"><i>public const var</i><br /><strong>&nbsp;&nbsp;ACTION_CACHED_LIST</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> "cachelisted"<br></i>&nbsp;</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>public const var</i><br /><strong>&nbsp;&nbsp;ACTION_DELETE</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> "deleted"<br></i>&nbsp;</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>public const var</i><br /><strong>&nbsp;&nbsp;ACTION_INSERT</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> "inserted"<br></i>&nbsp;</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>public const var</i><br /><strong>&nbsp;&nbsp;ACTION_LIST</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> "listed"<br></i>&nbsp;</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>public const var</i><br /><strong>&nbsp;&nbsp;ACTION_ON_ITERATE</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> "iterating"<br></i>&nbsp;</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>public const var</i><br /><strong>&nbsp;&nbsp;ACTION_SELECT</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> "selected"<br></i>&nbsp;</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>public const var</i><br /><strong>&nbsp;&nbsp;ACTION_UPDATE</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> "updated"<br></i>&nbsp;</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>public var</i><br /><strong>&nbsp;&nbsp;mAdditionalCondition</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			附加条件
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private var</i><br /><strong>&nbsp;&nbsp;mAutoKey</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i></i>&nbsp;</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private var</i><br /><strong>&nbsp;&nbsp;mCharset</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> 'gbk'<br></i>&nbsp;</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private var</i><br /><strong>&nbsp;&nbsp;mDbIndex</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> 0<br></i>&nbsp;</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private var</i><br /><strong>&nbsp;&nbsp;mHashMap</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i></i>&nbsp;</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>public var</i><br /><strong>&nbsp;&nbsp;mObjectDestination</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			应用目标类&lt;br /&gt;@var SOSO_DB_SQLCommand
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>public var</i><br /><strong>&nbsp;&nbsp;mPagination</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			Enter description here... &lt;br /&gt;@var SOSO_Util_Pagination
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private var</i><br /><strong>&nbsp;&nbsp;mPrimaryKey</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> array()<br></i>&nbsp;</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>public var</i><br /><strong>&nbsp;&nbsp;mSourceObject</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			条件提供类 &lt;br /&gt;@var SOSO_DB_SQLCommand
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>public var</i><br /><strong>&nbsp;&nbsp;mSQLCommand</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			数据库操作类 &lt;br /&gt;@var SOSO_DB_SQLCommand
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private var</i><br /><strong>&nbsp;&nbsp;mTable</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i></i>&nbsp;</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>public var</i><br /><strong>&nbsp;&nbsp;mTableFieldHash</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i></i>&nbsp;</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>public var</i><br /><strong>&nbsp;&nbsp;mTableHash</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i></i>&nbsp;</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>protected var</i><br /><strong>&nbsp;&nbsp;observers</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> array()<br></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			public $mTableStatus = array();
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private var</i><br /><strong>&nbsp;&nbsp;state</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			对象所处状态 &lt;br /&gt;@var string
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>
+		</table>
+</div><div class="ItemBody" id="OperationsTable">
+	<table border="0" cellspacing="0" cellpadding="0" class="Table">
+		<tr>
+			<td width="40%" class="TableHeading">Operation</td>
+			<td width="60%" class="TableHeading">Details</td>
+		</tr>
+						<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>__construct</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{2910324B-B993-4b2c-A7E8-1636D514259E}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{2910324B-B993-4b2c-A7E8-1636D514259E}" border="0" />pTableName: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{2910324B-B993-4b2c-A7E8-1636D514259E}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{2910324B-B993-4b2c-A7E8-1636D514259E}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{2910324B-B993-4b2c-A7E8-1636D514259E}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{2910324B-B993-4b2c-A7E8-1636D514259E}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{B4B0298A-6AC7-4a4d-97C3-A7DCF7764CC1}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{B4B0298A-6AC7-4a4d-97C3-A7DCF7764CC1}" border="0" />pDBConfig: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{B4B0298A-6AC7-4a4d-97C3-A7DCF7764CC1}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>0</td>
+						</tr>
+						<tr id="param{B4B0298A-6AC7-4a4d-97C3-A7DCF7764CC1}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{B4B0298A-6AC7-4a4d-97C3-A7DCF7764CC1}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{B4B0298A-6AC7-4a4d-97C3-A7DCF7764CC1}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			@access public&lt;br /&gt;@param string $pTableName 数据库表名&lt;br /&gt;@param int $pDBConfig 数据库连接配置文件中配置ID&lt;br /&gt;@param string $pTableName 表名&lt;br /&gt;@param int $pDBConfig 数据库索引
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>_cached_list</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{367D60E5-6F6B-46bf-8E76-561C61C6684E}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{367D60E5-6F6B-46bf-8E76-561C61C6684E}" border="0" />pCacheTime: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{367D60E5-6F6B-46bf-8E76-561C61C6684E}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>86400</td>
+						</tr>
+						<tr id="param{367D60E5-6F6B-46bf-8E76-561C61C6684E}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{367D60E5-6F6B-46bf-8E76-561C61C6684E}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{367D60E5-6F6B-46bf-8E76-561C61C6684E}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{323810FC-C74E-46fe-B9E1-26A6D5FA454D}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{323810FC-C74E-46fe-B9E1-26A6D5FA454D}" border="0" />pPage: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{323810FC-C74E-46fe-B9E1-26A6D5FA454D}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>0</td>
+						</tr>
+						<tr id="param{323810FC-C74E-46fe-B9E1-26A6D5FA454D}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{323810FC-C74E-46fe-B9E1-26A6D5FA454D}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{323810FC-C74E-46fe-B9E1-26A6D5FA454D}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{0141E3C6-29E6-4e51-877E-DC15A1EFB481}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{0141E3C6-29E6-4e51-877E-DC15A1EFB481}" border="0" />pPageSize: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{0141E3C6-29E6-4e51-877E-DC15A1EFB481}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>10</td>
+						</tr>
+						<tr id="param{0141E3C6-29E6-4e51-877E-DC15A1EFB481}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{0141E3C6-29E6-4e51-877E-DC15A1EFB481}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{0141E3C6-29E6-4e51-877E-DC15A1EFB481}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{30ED4667-5B22-4e9a-A918-B86241C397CA}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{30ED4667-5B22-4e9a-A918-B86241C397CA}" border="0" />pOrder: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{30ED4667-5B22-4e9a-A918-B86241C397CA}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>null</td>
+						</tr>
+						<tr id="param{30ED4667-5B22-4e9a-A918-B86241C397CA}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{30ED4667-5B22-4e9a-A918-B86241C397CA}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{30ED4667-5B22-4e9a-A918-B86241C397CA}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{A8E8127B-846A-4c3a-BBB5-372DDE0B7F07}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{A8E8127B-846A-4c3a-BBB5-372DDE0B7F07}" border="0" />pSmartCode: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{A8E8127B-846A-4c3a-BBB5-372DDE0B7F07}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>1</td>
+						</tr>
+						<tr id="param{A8E8127B-846A-4c3a-BBB5-372DDE0B7F07}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{A8E8127B-846A-4c3a-BBB5-372DDE0B7F07}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{A8E8127B-846A-4c3a-BBB5-372DDE0B7F07}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{6E4F443D-DCCF-43b6-923D-FAEBE6A7DF78}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{6E4F443D-DCCF-43b6-923D-FAEBE6A7DF78}" border="0" />pColumns: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{6E4F443D-DCCF-43b6-923D-FAEBE6A7DF78}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>'*'</td>
+						</tr>
+						<tr id="param{6E4F443D-DCCF-43b6-923D-FAEBE6A7DF78}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{6E4F443D-DCCF-43b6-923D-FAEBE6A7DF78}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{6E4F443D-DCCF-43b6-923D-FAEBE6A7DF78}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{1DC0446B-746B-48ff-A77F-B42131360A32}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{1DC0446B-746B-48ff-A77F-B42131360A32}" border="0" />pGroupBy: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{1DC0446B-746B-48ff-A77F-B42131360A32}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>''</td>
+						</tr>
+						<tr id="param{1DC0446B-746B-48ff-A77F-B42131360A32}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{1DC0446B-746B-48ff-A77F-B42131360A32}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{1DC0446B-746B-48ff-A77F-B42131360A32}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			缓存查询结果 &lt;br /&gt;@param int $pCacheTime 缓存时间，秒为单位，默认为一天(86400秒)&lt;br /&gt;@param int $pPage 当前页&lt;br /&gt;@param int $pPageSize 每页条目&lt;br /&gt;@param string $pOrder 排序方式&lt;br /&gt;@param bool/int $pSmartCode 启用模糊查询&lt;br /&gt;@param string $pColumns 查询列&lt;br /&gt;@param string $pGroupBy 分组&lt;br /&gt;@return unknown
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>_count</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{436D6624-B8B9-4c30-957B-6DA4ED1A98C7}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{436D6624-B8B9-4c30-957B-6DA4ED1A98C7}" border="0" />pSmartCode: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{436D6624-B8B9-4c30-957B-6DA4ED1A98C7}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>1</td>
+						</tr>
+						<tr id="param{436D6624-B8B9-4c30-957B-6DA4ED1A98C7}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{436D6624-B8B9-4c30-957B-6DA4ED1A98C7}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{436D6624-B8B9-4c30-957B-6DA4ED1A98C7}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{E6523FC5-3D32-4eaf-8ACB-5127EACC15F2}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{E6523FC5-3D32-4eaf-8ACB-5127EACC15F2}" border="0" />pColumns: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{E6523FC5-3D32-4eaf-8ACB-5127EACC15F2}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>'*'</td>
+						</tr>
+						<tr id="param{E6523FC5-3D32-4eaf-8ACB-5127EACC15F2}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{E6523FC5-3D32-4eaf-8ACB-5127EACC15F2}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{E6523FC5-3D32-4eaf-8ACB-5127EACC15F2}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{24754CDC-1EC2-4d2e-8EEB-E74F79D84800}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{24754CDC-1EC2-4d2e-8EEB-E74F79D84800}" border="0" />pGroupBy: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{24754CDC-1EC2-4d2e-8EEB-E74F79D84800}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>''</td>
+						</tr>
+						<tr id="param{24754CDC-1EC2-4d2e-8EEB-E74F79D84800}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{24754CDC-1EC2-4d2e-8EEB-E74F79D84800}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{24754CDC-1EC2-4d2e-8EEB-E74F79D84800}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			@access public &lt;br /&gt;@param boolean $pSmartCode 是否使用模糊查询&lt;br /&gt;@param string $pColumns 要查询列&lt;br /&gt;@param string $pGroupBy 分组&lt;br /&gt;@return integer
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>_delete</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{F8B98AAC-326E-4cdf-B0AA-ABC69309637A}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{F8B98AAC-326E-4cdf-B0AA-ABC69309637A}" border="0" />pSmartCode: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{F8B98AAC-326E-4cdf-B0AA-ABC69309637A}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>0</td>
+						</tr>
+						<tr id="param{F8B98AAC-326E-4cdf-B0AA-ABC69309637A}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{F8B98AAC-326E-4cdf-B0AA-ABC69309637A}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{F8B98AAC-326E-4cdf-B0AA-ABC69309637A}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">pSmartCode</div>
+</td>
+						</tr>
+					</table>
+):var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			@access public 
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>_fill</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{04389B05-07D9-42e3-8A90-42F7AE5DD989}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{04389B05-07D9-42e3-8A90-42F7AE5DD989}" border="0" />pArray: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{04389B05-07D9-42e3-8A90-42F7AE5DD989}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{04389B05-07D9-42e3-8A90-42F7AE5DD989}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>inout</td>
+						</tr>
+						<tr id="param{04389B05-07D9-42e3-8A90-42F7AE5DD989}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{04389B05-07D9-42e3-8A90-42F7AE5DD989}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">修改记录：2009-6-11 jessicaguo 将if (isset($this-&gt;mHashMap[$key]))条件改为if (array_key_exists($key,  $this-&gt;mHashMap))</div>
+</td>
+						</tr>
+					</table>
+):var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			@access public 
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>_get</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{5FE11E9D-9A40-4dde-88D2-FDD849FBB8A3}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{5FE11E9D-9A40-4dde-88D2-FDD849FBB8A3}" border="0" />pKey: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{5FE11E9D-9A40-4dde-88D2-FDD849FBB8A3}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{5FE11E9D-9A40-4dde-88D2-FDD849FBB8A3}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{5FE11E9D-9A40-4dde-88D2-FDD849FBB8A3}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{5FE11E9D-9A40-4dde-88D2-FDD849FBB8A3}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>_getObjectData</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{4EA5F0AF-F15A-41d3-9D41-A77BFA4A3F26}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{4EA5F0AF-F15A-41d3-9D41-A77BFA4A3F26}" border="0" />pKey: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{4EA5F0AF-F15A-41d3-9D41-A77BFA4A3F26}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{4EA5F0AF-F15A-41d3-9D41-A77BFA4A3F26}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{4EA5F0AF-F15A-41d3-9D41-A77BFA4A3F26}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{4EA5F0AF-F15A-41d3-9D41-A77BFA4A3F26}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">pKey</div>
+</td>
+						</tr>
+					</table>
+):var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>_getObjects</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{0D91B8A3-EC95-42de-8A85-9A5798525F7A}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{0D91B8A3-EC95-42de-8A85-9A5798525F7A}" border="0" />pPage: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{0D91B8A3-EC95-42de-8A85-9A5798525F7A}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>0</td>
+						</tr>
+						<tr id="param{0D91B8A3-EC95-42de-8A85-9A5798525F7A}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{0D91B8A3-EC95-42de-8A85-9A5798525F7A}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{0D91B8A3-EC95-42de-8A85-9A5798525F7A}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{7F02A4FF-DD86-4a89-9665-B7AD12FB6F67}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{7F02A4FF-DD86-4a89-9665-B7AD12FB6F67}" border="0" />pPageSize: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{7F02A4FF-DD86-4a89-9665-B7AD12FB6F67}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>10</td>
+						</tr>
+						<tr id="param{7F02A4FF-DD86-4a89-9665-B7AD12FB6F67}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{7F02A4FF-DD86-4a89-9665-B7AD12FB6F67}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{7F02A4FF-DD86-4a89-9665-B7AD12FB6F67}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{01CA9153-AFDF-4bfc-A479-DB9CAD7116CD}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{01CA9153-AFDF-4bfc-A479-DB9CAD7116CD}" border="0" />pOrder: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{01CA9153-AFDF-4bfc-A479-DB9CAD7116CD}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>null</td>
+						</tr>
+						<tr id="param{01CA9153-AFDF-4bfc-A479-DB9CAD7116CD}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{01CA9153-AFDF-4bfc-A479-DB9CAD7116CD}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{01CA9153-AFDF-4bfc-A479-DB9CAD7116CD}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{00AE9DA8-C7F1-4c52-A816-3FC6B26B5639}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{00AE9DA8-C7F1-4c52-A816-3FC6B26B5639}" border="0" />pSmartCode: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{00AE9DA8-C7F1-4c52-A816-3FC6B26B5639}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>1</td>
+						</tr>
+						<tr id="param{00AE9DA8-C7F1-4c52-A816-3FC6B26B5639}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{00AE9DA8-C7F1-4c52-A816-3FC6B26B5639}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{00AE9DA8-C7F1-4c52-A816-3FC6B26B5639}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{635D059E-C9F7-426a-8B07-F1C5FD0F2180}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{635D059E-C9F7-426a-8B07-F1C5FD0F2180}" border="0" />pColumns: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{635D059E-C9F7-426a-8B07-F1C5FD0F2180}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>'*'</td>
+						</tr>
+						<tr id="param{635D059E-C9F7-426a-8B07-F1C5FD0F2180}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{635D059E-C9F7-426a-8B07-F1C5FD0F2180}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{635D059E-C9F7-426a-8B07-F1C5FD0F2180}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{87488063-29D1-4f9c-8C70-C8B2AF6D88A8}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{87488063-29D1-4f9c-8C70-C8B2AF6D88A8}" border="0" />pGroupBy: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{87488063-29D1-4f9c-8C70-C8B2AF6D88A8}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>''</td>
+						</tr>
+						<tr id="param{87488063-29D1-4f9c-8C70-C8B2AF6D88A8}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{87488063-29D1-4f9c-8C70-C8B2AF6D88A8}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{87488063-29D1-4f9c-8C70-C8B2AF6D88A8}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">pGroupBy</div>
+</td>
+						</tr>
+					</table>
+):var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			@access public 
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>_getPagination</strong>():var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>_insert</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{8AC25D2B-8ADA-40a9-87AB-F5E74A352895}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{8AC25D2B-8ADA-40a9-87AB-F5E74A352895}" border="0" />pResult: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{8AC25D2B-8ADA-40a9-87AB-F5E74A352895}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>array()</td>
+						</tr>
+						<tr id="param{8AC25D2B-8ADA-40a9-87AB-F5E74A352895}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{8AC25D2B-8ADA-40a9-87AB-F5E74A352895}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{8AC25D2B-8ADA-40a9-87AB-F5E74A352895}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			对传进来的二维数组($pArray)进行插入操作（多条记录） | 自动遍历实例表映射属性的值进行插入（一条记录）&lt;br /&gt;@param array $pArray 待插入的二维数组&lt;br /&gt;@return integer affected_rows or last_insert_id
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>_iterate</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{16CB8935-EE2E-4bb6-86DA-ADBC27EE35C8}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{16CB8935-EE2E-4bb6-86DA-ADBC27EE35C8}" border="0" />pPage: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{16CB8935-EE2E-4bb6-86DA-ADBC27EE35C8}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>0</td>
+						</tr>
+						<tr id="param{16CB8935-EE2E-4bb6-86DA-ADBC27EE35C8}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{16CB8935-EE2E-4bb6-86DA-ADBC27EE35C8}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{16CB8935-EE2E-4bb6-86DA-ADBC27EE35C8}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{A5CC1BC9-74D6-47d3-AAF5-BF741FDA28F0}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{A5CC1BC9-74D6-47d3-AAF5-BF741FDA28F0}" border="0" />pPageSize: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{A5CC1BC9-74D6-47d3-AAF5-BF741FDA28F0}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>10</td>
+						</tr>
+						<tr id="param{A5CC1BC9-74D6-47d3-AAF5-BF741FDA28F0}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{A5CC1BC9-74D6-47d3-AAF5-BF741FDA28F0}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{A5CC1BC9-74D6-47d3-AAF5-BF741FDA28F0}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{C37B817C-431D-49c7-B065-DD211E4E31CD}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{C37B817C-431D-49c7-B065-DD211E4E31CD}" border="0" />pOrder: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{C37B817C-431D-49c7-B065-DD211E4E31CD}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>null</td>
+						</tr>
+						<tr id="param{C37B817C-431D-49c7-B065-DD211E4E31CD}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{C37B817C-431D-49c7-B065-DD211E4E31CD}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{C37B817C-431D-49c7-B065-DD211E4E31CD}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{7D2EAACC-B87D-410a-95F0-ABB4E0D8A7EA}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{7D2EAACC-B87D-410a-95F0-ABB4E0D8A7EA}" border="0" />pSmartCode: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{7D2EAACC-B87D-410a-95F0-ABB4E0D8A7EA}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>1</td>
+						</tr>
+						<tr id="param{7D2EAACC-B87D-410a-95F0-ABB4E0D8A7EA}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{7D2EAACC-B87D-410a-95F0-ABB4E0D8A7EA}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{7D2EAACC-B87D-410a-95F0-ABB4E0D8A7EA}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{2E16A6F7-0E9E-4e40-9F0D-06BDD48F72C8}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{2E16A6F7-0E9E-4e40-9F0D-06BDD48F72C8}" border="0" />pColumns: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{2E16A6F7-0E9E-4e40-9F0D-06BDD48F72C8}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>'*'</td>
+						</tr>
+						<tr id="param{2E16A6F7-0E9E-4e40-9F0D-06BDD48F72C8}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{2E16A6F7-0E9E-4e40-9F0D-06BDD48F72C8}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{2E16A6F7-0E9E-4e40-9F0D-06BDD48F72C8}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{F053A120-C024-4ecf-8F18-FA1A30B37FE6}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{F053A120-C024-4ecf-8F18-FA1A30B37FE6}" border="0" />pGroupBy: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{F053A120-C024-4ecf-8F18-FA1A30B37FE6}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>''</td>
+						</tr>
+						<tr id="param{F053A120-C024-4ecf-8F18-FA1A30B37FE6}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{F053A120-C024-4ecf-8F18-FA1A30B37FE6}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{F053A120-C024-4ecf-8F18-FA1A30B37FE6}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			Enter description here... &lt;br /&gt;@param int $pPage&lt;br /&gt;@param int $pPageSize&lt;br /&gt;@param mixed $pOrder&lt;br /&gt;@param int $pSmartCode&lt;br /&gt;@param string $pColumns&lt;br /&gt;@param string $pGroupBy&lt;br /&gt;@return array
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>_list</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{D3B4793A-A22A-42ad-921B-264C856BADC7}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{D3B4793A-A22A-42ad-921B-264C856BADC7}" border="0" />pPage: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{D3B4793A-A22A-42ad-921B-264C856BADC7}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>0</td>
+						</tr>
+						<tr id="param{D3B4793A-A22A-42ad-921B-264C856BADC7}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{D3B4793A-A22A-42ad-921B-264C856BADC7}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{D3B4793A-A22A-42ad-921B-264C856BADC7}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{C80A6397-8BA1-4b61-8721-4FCAEB3E7E68}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{C80A6397-8BA1-4b61-8721-4FCAEB3E7E68}" border="0" />pPageSize: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{C80A6397-8BA1-4b61-8721-4FCAEB3E7E68}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>10</td>
+						</tr>
+						<tr id="param{C80A6397-8BA1-4b61-8721-4FCAEB3E7E68}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{C80A6397-8BA1-4b61-8721-4FCAEB3E7E68}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{C80A6397-8BA1-4b61-8721-4FCAEB3E7E68}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{13A00B64-1938-4166-B1E5-03587A6C27A9}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{13A00B64-1938-4166-B1E5-03587A6C27A9}" border="0" />pOrder: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{13A00B64-1938-4166-B1E5-03587A6C27A9}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>null</td>
+						</tr>
+						<tr id="param{13A00B64-1938-4166-B1E5-03587A6C27A9}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{13A00B64-1938-4166-B1E5-03587A6C27A9}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{13A00B64-1938-4166-B1E5-03587A6C27A9}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{62695338-1362-4b2e-99CE-D800A6D45514}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{62695338-1362-4b2e-99CE-D800A6D45514}" border="0" />pSmartCode: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{62695338-1362-4b2e-99CE-D800A6D45514}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>1</td>
+						</tr>
+						<tr id="param{62695338-1362-4b2e-99CE-D800A6D45514}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{62695338-1362-4b2e-99CE-D800A6D45514}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{62695338-1362-4b2e-99CE-D800A6D45514}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{9A08B959-5B10-45fc-9361-7CBD7C039ACB}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{9A08B959-5B10-45fc-9361-7CBD7C039ACB}" border="0" />pColumns: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{9A08B959-5B10-45fc-9361-7CBD7C039ACB}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>'*'</td>
+						</tr>
+						<tr id="param{9A08B959-5B10-45fc-9361-7CBD7C039ACB}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{9A08B959-5B10-45fc-9361-7CBD7C039ACB}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{9A08B959-5B10-45fc-9361-7CBD7C039ACB}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{1EEEB811-83AF-4b5a-A37A-298CE8A4E02E}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{1EEEB811-83AF-4b5a-A37A-298CE8A4E02E}" border="0" />pGroupBy: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{1EEEB811-83AF-4b5a-A37A-298CE8A4E02E}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>''</td>
+						</tr>
+						<tr id="param{1EEEB811-83AF-4b5a-A37A-298CE8A4E02E}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{1EEEB811-83AF-4b5a-A37A-298CE8A4E02E}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{1EEEB811-83AF-4b5a-A37A-298CE8A4E02E}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			@access public &lt;br /&gt;@param int $pPage 当前页&lt;br /&gt;@param int $pPageSize 每页条目&lt;br /&gt;@param string $pOrder 排序方式&lt;br /&gt;@param bool/int $pSmartCode 启用模糊查询&lt;br /&gt;@param string $pColumns 查询列&lt;br /&gt;@param string $pGroupBy 分组
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>_refresh</strong>():var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			刷新方法，如果存在符合条件的记录，则更新响应字段，否则，插入一条新的记录，必须有主键存在且主键已赋值&lt;br /&gt;@access public
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>_reset</strong>():var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			@access public&lt;br /&gt;@return void
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>_select</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{0CAE9747-D10C-454d-828E-8DC10E20A8A7}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{0CAE9747-D10C-454d-828E-8DC10E20A8A7}" border="0" />pLimit: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{0CAE9747-D10C-454d-828E-8DC10E20A8A7}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>1</td>
+						</tr>
+						<tr id="param{0CAE9747-D10C-454d-828E-8DC10E20A8A7}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{0CAE9747-D10C-454d-828E-8DC10E20A8A7}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{0CAE9747-D10C-454d-828E-8DC10E20A8A7}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{0163332C-AFDF-43d8-9A53-00E8AE4D774B}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{0163332C-AFDF-43d8-9A53-00E8AE4D774B}" border="0" />pOrder: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{0163332C-AFDF-43d8-9A53-00E8AE4D774B}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>NULL</td>
+						</tr>
+						<tr id="param{0163332C-AFDF-43d8-9A53-00E8AE4D774B}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{0163332C-AFDF-43d8-9A53-00E8AE4D774B}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{0163332C-AFDF-43d8-9A53-00E8AE4D774B}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">pOrder</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{CF33BFEB-27D6-4f5a-ACA0-02F6955AECA9}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{CF33BFEB-27D6-4f5a-ACA0-02F6955AECA9}" border="0" />pSmartCode: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{CF33BFEB-27D6-4f5a-ACA0-02F6955AECA9}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>false</td>
+						</tr>
+						<tr id="param{CF33BFEB-27D6-4f5a-ACA0-02F6955AECA9}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{CF33BFEB-27D6-4f5a-ACA0-02F6955AECA9}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{CF33BFEB-27D6-4f5a-ACA0-02F6955AECA9}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			@access public 
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>_setObjectData</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{7CB1DD12-3B5E-414e-B280-35B7D8BBBC0B}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{7CB1DD12-3B5E-414e-B280-35B7D8BBBC0B}" border="0" />pKey: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{7CB1DD12-3B5E-414e-B280-35B7D8BBBC0B}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{7CB1DD12-3B5E-414e-B280-35B7D8BBBC0B}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{7CB1DD12-3B5E-414e-B280-35B7D8BBBC0B}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{7CB1DD12-3B5E-414e-B280-35B7D8BBBC0B}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{B31E1954-2DD2-474e-B2F2-3F3EB31C5C37}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{B31E1954-2DD2-474e-B2F2-3F3EB31C5C37}" border="0" />pValue: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{B31E1954-2DD2-474e-B2F2-3F3EB31C5C37}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{B31E1954-2DD2-474e-B2F2-3F3EB31C5C37}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{B31E1954-2DD2-474e-B2F2-3F3EB31C5C37}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{B31E1954-2DD2-474e-B2F2-3F3EB31C5C37}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">pValue</div>
+</td>
+						</tr>
+					</table>
+):var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>_toDOM</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{0DAC7117-5C87-4710-A357-1BAD6980F807}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{0DAC7117-5C87-4710-A357-1BAD6980F807}" border="0" />pDeep: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{0DAC7117-5C87-4710-A357-1BAD6980F807}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>0</td>
+						</tr>
+						<tr id="param{0DAC7117-5C87-4710-A357-1BAD6980F807}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{0DAC7117-5C87-4710-A357-1BAD6980F807}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{0DAC7117-5C87-4710-A357-1BAD6980F807}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">pDeep</div>
+</td>
+						</tr>
+					</table>
+):var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>_update</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{8FE218D8-731A-4f65-AC2C-9BBD79E430C4}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{8FE218D8-731A-4f65-AC2C-9BBD79E430C4}" border="0" />pSmartCode: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{8FE218D8-731A-4f65-AC2C-9BBD79E430C4}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>0</td>
+						</tr>
+						<tr id="param{8FE218D8-731A-4f65-AC2C-9BBD79E430C4}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{8FE218D8-731A-4f65-AC2C-9BBD79E430C4}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{8FE218D8-731A-4f65-AC2C-9BBD79E430C4}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>addObserver</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{4E518009-240D-4ad1-B2FE-1CEA43C16320}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{4E518009-240D-4ad1-B2FE-1CEA43C16320}" border="0" />observer: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{4E518009-240D-4ad1-B2FE-1CEA43C16320}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{4E518009-240D-4ad1-B2FE-1CEA43C16320}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>inout</td>
+						</tr>
+						<tr id="param{4E518009-240D-4ad1-B2FE-1CEA43C16320}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{4E518009-240D-4ad1-B2FE-1CEA43C16320}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">observer</div>
+</td>
+						</tr>
+					</table>
+):var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>attach</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{2B0E1F37-4563-433b-AC5C-3A33DC6B03D1}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{2B0E1F37-4563-433b-AC5C-3A33DC6B03D1}" border="0" />observer: <a href="../EA35.htm">SplObserver</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{2B0E1F37-4563-433b-AC5C-3A33DC6B03D1}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{2B0E1F37-4563-433b-AC5C-3A33DC6B03D1}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{2B0E1F37-4563-433b-AC5C-3A33DC6B03D1}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{2B0E1F37-4563-433b-AC5C-3A33DC6B03D1}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			实现观察者模式－Subject::attach
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>detach</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{BAF0F600-BCA5-493f-AD4E-737FC5B30188}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{BAF0F600-BCA5-493f-AD4E-737FC5B30188}" border="0" />observer: <a href="../EA35.htm">SplObserver</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{BAF0F600-BCA5-493f-AD4E-737FC5B30188}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{BAF0F600-BCA5-493f-AD4E-737FC5B30188}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{BAF0F600-BCA5-493f-AD4E-737FC5B30188}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{BAF0F600-BCA5-493f-AD4E-737FC5B30188}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			实现观察者模式－Subject::detach
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public static</i><br />
+					<strong>factory</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{845FE682-3D32-4810-BB8A-D6B343635971}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{845FE682-3D32-4810-BB8A-D6B343635971}" border="0" />tablename: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{845FE682-3D32-4810-BB8A-D6B343635971}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{845FE682-3D32-4810-BB8A-D6B343635971}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{845FE682-3D32-4810-BB8A-D6B343635971}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{845FE682-3D32-4810-BB8A-D6B343635971}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{FE5B04C4-B8AC-4002-AFDB-C02E591003C3}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{FE5B04C4-B8AC-4002-AFDB-C02E591003C3}" border="0" />config: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{FE5B04C4-B8AC-4002-AFDB-C02E591003C3}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>array()</td>
+						</tr>
+						<tr id="param{FE5B04C4-B8AC-4002-AFDB-C02E591003C3}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{FE5B04C4-B8AC-4002-AFDB-C02E591003C3}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{FE5B04C4-B8AC-4002-AFDB-C02E591003C3}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			根据自定义参数进行数据库连接 &lt;br /&gt;@example SOSO_ORM_TableObject::factory(&#39;flight&#39;,array(&#39;username&#39;=&gt;&#39;user&#39;,&#39;password&#39;=&gt;&#39;pwd&#39;,&#39;host&#39;=&gt;&#39;10.1.146.158&#39;,&#39;database&#39;=&gt;&#39;test&#39;));&lt;br /&gt;@param string $tablename&lt;br /&gt;@param array $config&lt;br /&gt;@return SOSO_ORM_TableObject
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>generateSql</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{3A088339-C013-427a-AE01-4561A124C0C7}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{3A088339-C013-427a-AE01-4561A124C0C7}" border="0" />pOrder: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{3A088339-C013-427a-AE01-4561A124C0C7}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>''</td>
+						</tr>
+						<tr id="param{3A088339-C013-427a-AE01-4561A124C0C7}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{3A088339-C013-427a-AE01-4561A124C0C7}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{3A088339-C013-427a-AE01-4561A124C0C7}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{469D42DB-3A3E-4d95-9ECE-A193D4C17BE3}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{469D42DB-3A3E-4d95-9ECE-A193D4C17BE3}" border="0" />pSmartCode: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{469D42DB-3A3E-4d95-9ECE-A193D4C17BE3}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>1</td>
+						</tr>
+						<tr id="param{469D42DB-3A3E-4d95-9ECE-A193D4C17BE3}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{469D42DB-3A3E-4d95-9ECE-A193D4C17BE3}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{469D42DB-3A3E-4d95-9ECE-A193D4C17BE3}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{8D447973-0241-401f-9256-5A79CF186133}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{8D447973-0241-401f-9256-5A79CF186133}" border="0" />pColumns: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{8D447973-0241-401f-9256-5A79CF186133}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>'*'</td>
+						</tr>
+						<tr id="param{8D447973-0241-401f-9256-5A79CF186133}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{8D447973-0241-401f-9256-5A79CF186133}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{8D447973-0241-401f-9256-5A79CF186133}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{3CA54BD2-B3DA-4065-BF28-200356605D16}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{3CA54BD2-B3DA-4065-BF28-200356605D16}" border="0" />pGroupBy: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{3CA54BD2-B3DA-4065-BF28-200356605D16}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>''</td>
+						</tr>
+						<tr id="param{3CA54BD2-B3DA-4065-BF28-200356605D16}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{3CA54BD2-B3DA-4065-BF28-200356605D16}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{3CA54BD2-B3DA-4065-BF28-200356605D16}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>getCharset</strong>():var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>getCondition</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{BD189D9A-2CFA-4b6f-BDDF-D3649C77EC68}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{BD189D9A-2CFA-4b6f-BDDF-D3649C77EC68}" border="0" />pSmartCode: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{BD189D9A-2CFA-4b6f-BDDF-D3649C77EC68}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>0</td>
+						</tr>
+						<tr id="param{BD189D9A-2CFA-4b6f-BDDF-D3649C77EC68}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{BD189D9A-2CFA-4b6f-BDDF-D3649C77EC68}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{BD189D9A-2CFA-4b6f-BDDF-D3649C77EC68}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{5C842D96-246F-41e9-AA54-6CE8C97429E7}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{5C842D96-246F-41e9-AA54-6CE8C97429E7}" border="0" />pObject: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{5C842D96-246F-41e9-AA54-6CE8C97429E7}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{5C842D96-246F-41e9-AA54-6CE8C97429E7}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{5C842D96-246F-41e9-AA54-6CE8C97429E7}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{5C842D96-246F-41e9-AA54-6CE8C97429E7}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>getIterator</strong>():var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>getLastQuery</strong>():var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>getMapHash</strong>():var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>getState</strong>():var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>getTable</strong>():var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>isDigtial</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{5E464EF5-F63B-4655-BFB4-8906CF8B3F0B}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{5E464EF5-F63B-4655-BFB4-8906CF8B3F0B}" border="0" />pType: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{5E464EF5-F63B-4655-BFB4-8906CF8B3F0B}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{5E464EF5-F63B-4655-BFB4-8906CF8B3F0B}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{5E464EF5-F63B-4655-BFB4-8906CF8B3F0B}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{5E464EF5-F63B-4655-BFB4-8906CF8B3F0B}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">pType</div>
+</td>
+						</tr>
+					</table>
+):var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			@access private 
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>notify</strong>():var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			实现观察者模式－Subject::notify
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>notifyObservers</strong>():var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			alias for notify
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>prepareHashMap</strong>():var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			@access private
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>prepareSQL</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{E8E000D5-CCEF-4f68-ABB6-3BBC9E3FE865}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{E8E000D5-CCEF-4f68-ABB6-3BBC9E3FE865}" border="0" />pType: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{E8E000D5-CCEF-4f68-ABB6-3BBC9E3FE865}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>0</td>
+						</tr>
+						<tr id="param{E8E000D5-CCEF-4f68-ABB6-3BBC9E3FE865}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{E8E000D5-CCEF-4f68-ABB6-3BBC9E3FE865}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{E8E000D5-CCEF-4f68-ABB6-3BBC9E3FE865}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{38523013-FEB8-4eb9-A082-DA0684896717}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{38523013-FEB8-4eb9-A082-DA0684896717}" border="0" />pObjectSource: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{38523013-FEB8-4eb9-A082-DA0684896717}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td>null</td>
+						</tr>
+						<tr id="param{38523013-FEB8-4eb9-A082-DA0684896717}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{38523013-FEB8-4eb9-A082-DA0684896717}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{38523013-FEB8-4eb9-A082-DA0684896717}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			@access private&lt;br /&gt;@param int $pType 自定义类型&lt;br /&gt;@param SOSO_ORM_TableObject $pObjectSource 条件提供实例&lt;br /&gt;@return array
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>setState</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{D5D7B0A3-5755-4e74-B81E-C88A4D7E4EFF}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{D5D7B0A3-5755-4e74-B81E-C88A4D7E4EFF}" border="0" />state: var</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{D5D7B0A3-5755-4e74-B81E-C88A4D7E4EFF}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{D5D7B0A3-5755-4e74-B81E-C88A4D7E4EFF}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{D5D7B0A3-5755-4e74-B81E-C88A4D7E4EFF}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{D5D7B0A3-5755-4e74-B81E-C88A4D7E4EFF}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">state</div>
+</td>
+						</tr>
+					</table>
+):var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>update</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{563356D4-A1D4-44ed-8598-6A1001E7565A}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{563356D4-A1D4-44ed-8598-6A1001E7565A}" border="0" />obj: <a href="../EA36.htm">SplSubject</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{563356D4-A1D4-44ed-8598-6A1001E7565A}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{563356D4-A1D4-44ed-8598-6A1001E7565A}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{563356D4-A1D4-44ed-8598-6A1001E7565A}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{563356D4-A1D4-44ed-8598-6A1001E7565A}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			实现观察者模式－Observer::update
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>updateTableStatus</strong>():var
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			@access private
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+
+		</table>
+</div>		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA1/EA1/EA1/EA52.htm">SOSO_ACl_Oss_Mapping_Actions</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Generalization</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA1/EA1/EA1/EA53.htm">SOSO_Acl_Oss_Mapping_Base</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Generalization</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA1/EA1/EA1/EA54.htm">SOSO_Acl_Oss_Mapping_Groupright</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Generalization</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA1/EA1/EA1/EA55.htm">SOSO_ACl_Oss_Mapping_Groups</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Generalization</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA1/EA1/EA1/EA56.htm">SOSO_ACl_Oss_Mapping_GroupUser</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Generalization</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA1/EA1/EA1/EA57.htm">SOSO_ACl_Oss_Mapping_Models</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Generalization</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA1/EA1/EA1/EA58.htm">SOSO_ACl_Oss_Mapping_System</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Generalization</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA1/EA1/EA1/EA59.htm">SOSO_ACl_Oss_Mapping_Users</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Generalization</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA30.htm">SOSO_Object</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Generalization</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA13/EA190.htm">«interface» SOSO_Interface_Subject</a></td>
+					<td width="15%" class="TableRow" valign="top">Interface</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA13/EA188.htm">«interface» SOSO_Interface_Observer</a></td>
+					<td width="15%" class="TableRow" valign="top">Interface</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+<div class="pageFooter"></div>
+ 
+</body>
+</html>

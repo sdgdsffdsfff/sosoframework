@@ -1,0 +1,3 @@
+tocTab[tocTab.length] = new Array("12:1", "", "Helper", "EARoot/EA12/EA182.htm", "175.png", "73", "0", "", "Logical diagram");
+tocTab[tocTab.length] = new Array("12:2", "", "SOSO_Helper_Builder", "EARoot/EA12/EA184.htm", "5.png", "304", "0", "", "Class");
+tocTab[tocTab.length] = new Array("12:3", "", "SOSO_Helper_DataImportBuilder", "EARoot/EA12/EA185.htm", "5.png", "305", "0", "", "Class");

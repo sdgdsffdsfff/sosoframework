@@ -1,0 +1,12 @@
+<VirtualHost *:80 >
+			#一个经典配置示例
+    	DocumentRoot /PATH/TO/SITE  #主目录
+	    ServerName mytest.localhost.com  #域名
+	    DirectoryIndex index.html index.htm index.php
+	    alias /libs/ "/libs/framework_proj/trunk/NonPHP/"
+	    RewriteEngine on
+	    RewriteRule WEB-INF [R=404,L]
+	    RewriteCond %{DOCUMENT_ROOT}/%{REQUEST_FILENAME} !-f
+    	RewriteCond %{REQUEST_FILENAME} .(php|isoso)$
+    	RewriteRule ^(.*)/[^/]* $1/WEB-INF/entry.php [QSA,NE,L]
+	</VirtualHost>
