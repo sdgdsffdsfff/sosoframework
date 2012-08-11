@@ -1,0 +1,38 @@
+安装文档：
+
+新方法： 执行trunk\SOSO\Helper下的build.sh
+
+
+(老)手动办法 ：
+1.checkout Framework源码到任意目录（https://bj-scm.tencent.com/search/search_superphp_rep/framework_proj/trunk/）
+
+2.拷贝 /path/to/isosoFramework/resources/Samples/Project structure.zip 到指定目录，解压缩，
+  并根据项目将文件夹改名，如test.moon.com；
+
+3.根据Samples目录下的site.htaccess配置内容，配置项目虚拟主机；修改其中的DocumentRoot和ServerName
+  其中DocumentRoot指到code目录
+
+4.将code\WEB-INF下的entry.php-dist和web.xml-dist各拷贝一份，并将拷贝后的文件中的-dist去掉，
+	生成entry.php和web.xml 二个文件。
+		
+5. 配置entry.php和web.xml
+   (1) entry.php第一行，引用框架的SOSO.php文件，修改它指到正确的路径；
+   
+   (2) web.xml是项目配置文件，可以指定模板存放路径（<template>节点），class存放根目录（<class>)以及数据库配置
+       (<databases>)，如要支持多数据库操作，需要相应的加多个<database>节点
+   
+   web.xml的额外信息：
+   〈project>为根节点，可以有mode="online|debug",session="disable|memcache|database"等选项；
+    mode=debug,表示项目为调试模式，所有页面错误信息，都是直接打印到页面上，供开发人员调试、优化；此时不对表信息等
+   						做cache处理，如果访问一个不存在页面，抛异常；
+    mode=online表示项目为上线状态，此状态的页面如果有错误信息，记入log文件；如果访问一个不存在的页面，跳到首页；
+    
+    关于session:
+      session属性如果指定，则可以选择session的处理方式，如果不指定此属性，则不做额外处理。
+    
+    可以任意添加节点，获得节点列表或节点属性，可以使用SOSO_Framework_Config的相关方法或SOSO_Framework_Registry
+    
+6.到此之前的5步的工作完成后，如果使用了数据库而且想生成表映射类，可以使用工具直接生成，以test.moon.com为例，直接访问
+  test.moon.com/SOSO_Helper_Builder.php，即可在<class>目录下生成所有的表映射类
+  
+7.到此，一个标准的基于SuperPHPFramework的项目就创建完成了。关于如何使用框架进行开发，可以暂时阅读《Manual.doc》

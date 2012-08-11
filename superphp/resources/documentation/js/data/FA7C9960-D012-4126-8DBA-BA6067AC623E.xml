@@ -1,0 +1,4 @@
+tocTab[tocTab.length] = new Array("14:1", "", "ORM", "EARoot/EA14/EA191.htm", "175.png", "75", "0", "", "Logical diagram");
+tocTab[tocTab.length] = new Array("14:2", "", "SOSO_ORM_TableAdmin", "EARoot/EA14/EA193.htm", "5.png", "311", "0", "", "Class");
+tocTab[tocTab.length] = new Array("14:3", "", "SOSO_ORM_TableObject", "EARoot/EA14/EA194.htm", "5.png", "312", "0", "", "Class");
+tocTab[tocTab.length] = new Array("14:4", "", "SOSO_ORM_TableObjectProxy", "EARoot/EA14/EA195.htm", "5.png", "313", "0", "", "Class");

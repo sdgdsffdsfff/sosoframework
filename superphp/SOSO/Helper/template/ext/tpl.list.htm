@@ -1,0 +1,39 @@
+<div id="GridWrapper">
+	<div id="grider"></div>
+</div>
+<script>
+	
+	var tList = [];
+	var data = [];
+	{literal}
+	{if $list_json}
+	var data = {$list_json};	
+	{/if}
+
+	{if $metadata_json}
+	var meta = {$metadata_json};
+	{/if}
+	
+	{if $pageinfo_json}
+	var page = {$pageinfo_json};
+	{/if}
+	{if $primary_key}
+	var primary_key = {$primary_key};
+	{/if}
+	{/literal}
+	{ldelim}literal{rdelim}
+	{literal}
+	if (typeof window.onload == 'function'){
+	  var orig = window.onload;
+	 }
+	 window.onload=function(){
+	    if (orig) orig();
+		if (data && data.constructor == Array && data.length > 0){
+			grid = widgets.createGrid(data,'grider',Ext.getBody().dom.clientWidth*.97,Ext.getBody().dom.clientHeight*.97,null,location.pathname);
+			widgets.resizeEle('GridWrapper',{width: null,minWidth: null,minHeight: 250,maxHeight:1000,maxWidth: null,dynamic: false,wrap: true,handles: 's',pinned:true},function(){
+   			grid.setHeight(arguments[2]-20);
+			});
+		}
+	 }
+	{/literal}{ldelim}/literal{rdelim}
+</script>

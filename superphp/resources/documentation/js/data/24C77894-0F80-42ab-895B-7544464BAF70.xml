@@ -1,0 +1,2 @@
+tocTab[tocTab.length] = new Array("1.2:1", "", "Permission", "EARoot/EA1/EA2/EA60.htm", "175.png", "55", "0", "", "Logical diagram");
+tocTab[tocTab.length] = new Array("1.2:2", "", "SOSO_Acl_Permission_Oss", "EARoot/EA1/EA2/EA62.htm", "5.png", "204", "0", "", "Class");

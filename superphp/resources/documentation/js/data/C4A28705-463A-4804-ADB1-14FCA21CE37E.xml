@@ -1,0 +1,3 @@
+tocTab[tocTab.length] = new Array("6:1", "", "Cache", "EARoot/EA6/EA138.htm", "175.png", "66", "0", "", "Logical diagram");
+tocTab[tocTab.length] = new Array("6:2", "", "SOSO_Cache_File", "EARoot/EA6/EA140.htm", "5.png", "268", "0", "", "Class");
+tocTab[tocTab.length] = new Array("6:3", "", "SOSO_Cache_Memcache", "EARoot/EA6/EA141.htm", "5.png", "269", "0", "", "Class");

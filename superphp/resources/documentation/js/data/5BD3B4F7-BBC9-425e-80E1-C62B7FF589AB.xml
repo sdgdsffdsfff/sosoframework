@@ -1,0 +1,8 @@
+tocTab[tocTab.length] = new Array("3:1", "", "Base", "EARoot/EA3/EA71.htm", "175.png", "58", "0", "", "Logical diagram");
+tocTab[tocTab.length] = new Array("3:2", "", "SOSO_Base_Alarm", "EARoot/EA3/EA76.htm", "5.png", "244", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3:3", "", "SOSO_Base_Task", "EARoot/EA3/EA77.htm", "5.png", "245", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3:4", "", "SOSO_Base_TaskRunner", "EARoot/EA3/EA78.htm", "5.png", "246", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.1", "1", "Alarm", "EARoot/EA3/EA73.htm", "4.png", "", "", "{2412D73B-DA5F-4fd4-95D2-F30E61D2656A}", "Package");
+tocTab[tocTab.length] = new Array("3.2", "1", "Data", "EARoot/EA3/EA74.htm", "4.png", "", "", "{69EAA042-0B1B-4dd3-96A5-79EED71749B7}", "Package");
+tocTab[tocTab.length] = new Array("3.3", "1", "Exceptions", "EARoot/EA3/EA75.htm", "4.png", "", "", "{0378416A-5B69-4c28-BD7E-E5633230F4B2}", "Package");
+tocTab[tocTab.length] = new Array("3.4", "1", "Util", "EARoot/EA3/EA79.htm", "4.png", "", "", "{7334C5A5-15A9-4459-A958-23D0C2F109E5}", "Package");

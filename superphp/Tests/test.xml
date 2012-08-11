@@ -1,0 +1,417 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="for_test">
+	<table_data name="user_feed">
+	<row>
+		<field name="id">1</field>
+		<field name="qq">123456</field>
+		<field name="username">moonzhang</field>
+		<field name="dateline">2012-02-28 09:47:25</field>
+		<field name="hash_template">test template</field>
+		<field name="hash_data">test data</field>
+	</row>
+	<row>
+		<field name="id">2</field>
+		<field name="qq">123456</field>
+		<field name="username">moonzhang</field>
+		<field name="dateline">2012-02-28 09:47:25</field>
+		<field name="hash_template">test2 template</field>
+		<field name="hash_data">test2 data</field>
+	</row>
+	<row>
+		<field name="id">3</field>
+		<field name="qq">123456</field>
+		<field name="username">moonzhang</field>
+		<field name="dateline">2012-02-28 09:47:25</field>
+		<field name="hash_template">test template</field>
+		<field name="hash_data">test data</field>
+	</row>
+	<row>
+		<field name="id">4</field>
+		<field name="qq">223456</field>
+		<field name="username">moonzhang</field>
+		<field name="dateline">2012-02-28 09:47:25</field>
+		<field name="hash_template">test template</field>
+		<field name="hash_data">test data</field>
+	</row>
+	<row>
+		<field name="id">5</field>
+		<field name="qq">323456</field>
+		<field name="username">moonzhang</field>
+		<field name="dateline">2012-02-28 09:47:25</field>
+		<field name="hash_template">test template</field>
+		<field name="hash_data">test data</field>
+	</row>
+	<row>
+		<field name="id">6</field>
+		<field name="qq">423456</field>
+		<field name="username">moonzhang</field>
+		<field name="dateline">2012-02-28 09:47:25</field>
+		<field name="hash_template">test template</field>
+		<field name="hash_data">test data</field>
+	</row>
+	<row>
+		<field name="id">7</field>
+		<field name="qq">523456</field>
+		<field name="username">moonzhang</field>
+		<field name="dateline">2012-02-28 09:47:25</field>
+		<field name="hash_template">test template</field>
+		<field name="hash_data">test data</field>
+	</row>
+	<row>
+		<field name="id">8</field>
+		<field name="qq">623456</field>
+		<field name="username">moonzhang</field>
+		<field name="dateline">2012-02-28 09:47:25</field>
+		<field name="hash_template">test template</field>
+		<field name="hash_data">test data</field>
+	</row>
+	<row>
+		<field name="id">9</field>
+		<field name="qq">723456</field>
+		<field name="username">moonzhang</field>
+		<field name="dateline">2012-02-28 09:47:25</field>
+		<field name="hash_template">test template</field>
+		<field name="hash_data">test data</field>
+	</row>
+	<row>
+		<field name="id">10</field>
+		<field name="qq">123456</field>
+		<field name="username">moonzhang</field>
+		<field name="dateline">2012-02-28 09:47:25</field>
+		<field name="hash_template">test template</field>
+		<field name="hash_data">test data</field>
+	</row>
+	</table_data>
+	<table_data name="user_feed_orig">
+	<row>
+		<field name="id">1</field>
+		<field name="qq">123456</field>
+		<field name="username">moonzhang</field>
+		<field name="dateline">2012-02-28 09:47:25</field>
+		<field name="hash_template">test template</field>
+		<field name="hash_data">test data</field>
+	</row>
+	<row>
+		<field name="id">2</field>
+		<field name="qq">123456</field>
+		<field name="username">moonzhang</field>
+		<field name="dateline">2012-02-28 09:47:25</field>
+		<field name="hash_template">test2 template</field>
+		<field name="hash_data">test2 data</field>
+	</row>
+	<row>
+		<field name="id">3</field>
+		<field name="qq">123456</field>
+		<field name="username">moonzhang</field>
+		<field name="dateline">2012-02-28 09:47:25</field>
+		<field name="hash_template">test template</field>
+		<field name="hash_data">test data</field>
+	</row>
+	<row>
+		<field name="id">4</field>
+		<field name="qq">223456</field>
+		<field name="username">moonzhang</field>
+		<field name="dateline">2012-02-28 09:47:25</field>
+		<field name="hash_template">test template</field>
+		<field name="hash_data">test data</field>
+	</row>
+	<row>
+		<field name="id">5</field>
+		<field name="qq">323456</field>
+		<field name="username">moonzhang</field>
+		<field name="dateline">2012-02-28 09:47:25</field>
+		<field name="hash_template">test template</field>
+		<field name="hash_data">test data</field>
+	</row>
+	<row>
+		<field name="id">6</field>
+		<field name="qq">423456</field>
+		<field name="username">moonzhang</field>
+		<field name="dateline">2012-02-28 09:47:25</field>
+		<field name="hash_template">test template</field>
+		<field name="hash_data">test data</field>
+	</row>
+	<row>
+		<field name="id">7</field>
+		<field name="qq">523456</field>
+		<field name="username">moonzhang</field>
+		<field name="dateline">2012-02-28 09:47:25</field>
+		<field name="hash_template">test template</field>
+		<field name="hash_data">test data</field>
+	</row>
+	<row>
+		<field name="id">8</field>
+		<field name="qq">623456</field>
+		<field name="username">moonzhang</field>
+		<field name="dateline">2012-02-28 09:47:25</field>
+		<field name="hash_template">test template</field>
+		<field name="hash_data">test data</field>
+	</row>
+	<row>
+		<field name="id">9</field>
+		<field name="qq">723456</field>
+		<field name="username">moonzhang</field>
+		<field name="dateline">2012-02-28 09:47:25</field>
+		<field name="hash_template">test template</field>
+		<field name="hash_data">test data</field>
+	</row>
+	<row>
+		<field name="id">10</field>
+		<field name="qq">123456</field>
+		<field name="username">moonzhang</field>
+		<field name="dateline">2012-02-28 09:47:25</field>
+		<field name="hash_template">test template</field>
+		<field name="hash_data">test data</field>
+	</row>
+	</table_data>
+	<table_data name="user_items">
+	</table_data>
+	<table_data name="user_items_orig">
+	</table_data>
+	<table_data name="users">
+	<row>
+		<field name="qq">123456</field>
+		<field name="golds">100</field>
+		<field name="maxgolds">500</field>
+		<field name="buytimes">0</field>
+		<field name="drawtimes">0</field>
+		<field name="pclose">0</field>
+		<field name="lighted">0</field>
+		<field name="source">hao</field>
+		<field name="daily_date">2012-02-28</field>
+		<field name="status">0</field>
+	</row>
+	<row>
+		<field name="qq">223456</field>
+		<field name="golds">101</field>
+		<field name="maxgolds">500</field>
+		<field name="buytimes">0</field>
+		<field name="drawtimes">0</field>
+		<field name="pclose">0</field>
+		<field name="lighted">0</field>
+		<field name="source">hao</field>
+		<field name="daily_date">2012-02-28</field>
+		<field name="status">0</field>
+	</row>
+	<row>
+		<field name="qq">323456</field>
+		<field name="golds">102</field>
+		<field name="maxgolds">500</field>
+		<field name="buytimes">0</field>
+		<field name="drawtimes">0</field>
+		<field name="pclose">0</field>
+		<field name="lighted">0</field>
+		<field name="source">hao</field>
+		<field name="daily_date">2012-02-28</field>
+		<field name="status">0</field>
+	</row>
+	<row>
+		<field name="qq">423456</field>
+		<field name="golds">103</field>
+		<field name="maxgolds">500</field>
+		<field name="buytimes">0</field>
+		<field name="drawtimes">0</field>
+		<field name="pclose">0</field>
+		<field name="lighted">0</field>
+		<field name="source">hao</field>
+		<field name="daily_date">2012-02-28</field>
+		<field name="status">0</field>
+	</row>
+	<row>
+		<field name="qq">523456</field>
+		<field name="golds">104</field>
+		<field name="maxgolds">500</field>
+		<field name="buytimes">0</field>
+		<field name="drawtimes">0</field>
+		<field name="pclose">0</field>
+		<field name="lighted">0</field>
+		<field name="source">hao</field>
+		<field name="daily_date">2012-02-28</field>
+		<field name="status">0</field>
+	</row>
+	<row>
+		<field name="qq">623456</field>
+		<field name="golds">105</field>
+		<field name="maxgolds">500</field>
+		<field name="buytimes">0</field>
+		<field name="drawtimes">0</field>
+		<field name="pclose">0</field>
+		<field name="lighted">0</field>
+		<field name="source">hao</field>
+		<field name="daily_date">2012-02-28</field>
+		<field name="status">0</field>
+	</row>
+	<row>
+		<field name="qq">723456</field>
+		<field name="golds">106</field>
+		<field name="maxgolds">500</field>
+		<field name="buytimes">0</field>
+		<field name="drawtimes">0</field>
+		<field name="pclose">0</field>
+		<field name="lighted">0</field>
+		<field name="source">hao</field>
+		<field name="daily_date">2012-02-28</field>
+		<field name="status">0</field>
+	</row>
+	<row>
+		<field name="qq">823456</field>
+		<field name="golds">107</field>
+		<field name="maxgolds">500</field>
+		<field name="buytimes">0</field>
+		<field name="drawtimes">0</field>
+		<field name="pclose">0</field>
+		<field name="lighted">0</field>
+		<field name="source">hao</field>
+		<field name="daily_date">2012-02-28</field>
+		<field name="status">0</field>
+	</row>
+	<row>
+		<field name="qq">923456</field>
+		<field name="golds">108</field>
+		<field name="maxgolds">500</field>
+		<field name="buytimes">0</field>
+		<field name="drawtimes">0</field>
+		<field name="pclose">0</field>
+		<field name="lighted">0</field>
+		<field name="source">hao</field>
+		<field name="daily_date">2012-02-28</field>
+		<field name="status">0</field>
+	</row>
+	<row>
+		<field name="qq">103456</field>
+		<field name="golds">100</field>
+		<field name="maxgolds">500</field>
+		<field name="buytimes">0</field>
+		<field name="drawtimes">0</field>
+		<field name="pclose">0</field>
+		<field name="lighted">0</field>
+		<field name="source">hao</field>
+		<field name="daily_date">2012-02-28</field>
+		<field name="status">0</field>
+	</row>
+	</table_data>
+	<table_data name="users_orig">
+	<row>
+		<field name="qq">123456</field>
+		<field name="golds">100</field>
+		<field name="maxgolds">500</field>
+		<field name="buytimes">0</field>
+		<field name="drawtimes">0</field>
+		<field name="pclose">0</field>
+		<field name="lighted">0</field>
+		<field name="source">hao</field>
+		<field name="daily_date">2012-02-28</field>
+		<field name="status">0</field>
+	</row>
+	<row>
+		<field name="qq">223456</field>
+		<field name="golds">101</field>
+		<field name="maxgolds">500</field>
+		<field name="buytimes">0</field>
+		<field name="drawtimes">0</field>
+		<field name="pclose">0</field>
+		<field name="lighted">0</field>
+		<field name="source">hao</field>
+		<field name="daily_date">2012-02-28</field>
+		<field name="status">0</field>
+	</row>
+	<row>
+		<field name="qq">323456</field>
+		<field name="golds">102</field>
+		<field name="maxgolds">500</field>
+		<field name="buytimes">0</field>
+		<field name="drawtimes">0</field>
+		<field name="pclose">0</field>
+		<field name="lighted">0</field>
+		<field name="source">hao</field>
+		<field name="daily_date">2012-02-28</field>
+		<field name="status">0</field>
+	</row>
+	<row>
+		<field name="qq">423456</field>
+		<field name="golds">103</field>
+		<field name="maxgolds">500</field>
+		<field name="buytimes">0</field>
+		<field name="drawtimes">0</field>
+		<field name="pclose">0</field>
+		<field name="lighted">0</field>
+		<field name="source">hao</field>
+		<field name="daily_date">2012-02-28</field>
+		<field name="status">0</field>
+	</row>
+	<row>
+		<field name="qq">523456</field>
+		<field name="golds">104</field>
+		<field name="maxgolds">500</field>
+		<field name="buytimes">0</field>
+		<field name="drawtimes">0</field>
+		<field name="pclose">0</field>
+		<field name="lighted">0</field>
+		<field name="source">hao</field>
+		<field name="daily_date">2012-02-28</field>
+		<field name="status">0</field>
+	</row>
+	<row>
+		<field name="qq">623456</field>
+		<field name="golds">105</field>
+		<field name="maxgolds">500</field>
+		<field name="buytimes">0</field>
+		<field name="drawtimes">0</field>
+		<field name="pclose">0</field>
+		<field name="lighted">0</field>
+		<field name="source">hao</field>
+		<field name="daily_date">2012-02-28</field>
+		<field name="status">0</field>
+	</row>
+	<row>
+		<field name="qq">723456</field>
+		<field name="golds">106</field>
+		<field name="maxgolds">500</field>
+		<field name="buytimes">0</field>
+		<field name="drawtimes">0</field>
+		<field name="pclose">0</field>
+		<field name="lighted">0</field>
+		<field name="source">hao</field>
+		<field name="daily_date">2012-02-28</field>
+		<field name="status">0</field>
+	</row>
+	<row>
+		<field name="qq">823456</field>
+		<field name="golds">107</field>
+		<field name="maxgolds">500</field>
+		<field name="buytimes">0</field>
+		<field name="drawtimes">0</field>
+		<field name="pclose">0</field>
+		<field name="lighted">0</field>
+		<field name="source">hao</field>
+		<field name="daily_date">2012-02-28</field>
+		<field name="status">0</field>
+	</row>
+	<row>
+		<field name="qq">923456</field>
+		<field name="golds">108</field>
+		<field name="maxgolds">500</field>
+		<field name="buytimes">0</field>
+		<field name="drawtimes">0</field>
+		<field name="pclose">0</field>
+		<field name="lighted">0</field>
+		<field name="source">hao</field>
+		<field name="daily_date">2012-02-28</field>
+		<field name="status">0</field>
+	</row>
+	<row>
+		<field name="qq">103456</field>
+		<field name="golds">100</field>
+		<field name="maxgolds">500</field>
+		<field name="buytimes">0</field>
+		<field name="drawtimes">0</field>
+		<field name="pclose">0</field>
+		<field name="lighted">0</field>
+		<field name="source">hao</field>
+		<field name="daily_date">2012-02-28</field>
+		<field name="status">0</field>
+	</row>
+	</table_data>
+</database>
+</mysqldump>

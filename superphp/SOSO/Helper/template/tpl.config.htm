@@ -1,0 +1,111 @@
+{include file="tpl.helper_header.htm"}
+  {include file="tpl.menu.htm"}
+ {literal}
+ <style type="text/css">
+<!--
+.style1 {color: #FF0000}
+span#notice{
+	color:red;
+}
+-->
+</style>
+ <script language="javascript">
+ 	function checkForm(frm){
+		for(var i=0,len=frm.overwrite.length;i<len;i++){
+ 			if(frm.overwrite[i].checked && frm.overwrite[i].value==1){
+ 				return(confirm('确认要覆盖模板吗?'));
+ 			}
+		}
+ 		return true;
+ 	}
+ </script>
+ {/literal}
+<pre>
+说明 ： 此配置界面，可控制字段的别名、类型，以及各字段在不同操作时的显/隐控制（是：显示; 否：隐藏）
+        默认情况下，并不会覆盖已生成的模板，如要强制更新，可选择“强制更新”
+</pre>
+<form action="" method="post" onsubmit="return checkForm(this)">
+  <table cellSpacing="0" cellPadding="0" id="table10" align="center">
+    <tr>
+      <td>
+      <!-- top start -->
+      <TABLE class=lch id=table11 cellSpacing=0 cellPadding=0>
+<TBODY>
+<TR>
+<TD vAlign=top><IMG height=17 alt="" src="/libs/images/list/l.gif" width=10 border=0></TD>
+<TD width="100%">
+<TABLE id=table12 cellSpacing=3 cellPadding=0>
+<TBODY>
+<TR>
+<TD><A title="刷新本页" alt="刷新本页" href="javascript:location.reload(true);"><img id=btn height=15 alt="刷新本页" src="/libs/images/list/btnRefresh1.gif" width=15 border=0></A></TD>
+<TD class=c noWrap>表:{$smarty.get.table}</TD>
+</TR></TBODY></TABLE></TD>
+<TD vAlign=top><IMG height=17 alt="" src="/libs/images/list/r.gif" width=10 border=0></TD></TR></TBODY></TABLE><!-- top end -->
+
+      <table class="lcb" cellSpacing="0" cellPadding="5" width="100%" border="0" id="table13">
+          <tr>
+            <td>
+            
+            <table border="0" align="center" width="100%">
+                <tr class='header' align="center">
+                  <td align="center">字段</td>
+                  <td align="center">注释</td>
+                  <td align="center">类型</td>
+                  <td align="center">插入</td>
+                  <td align="center">更新</td>
+                  <td align="center">查看</td>
+                  <td align="center">列表</td>
+                  <td align="center">查询</td>
+                </tr>
+                {section name=mysec loop=$list}
+                <tr style="border: 1px solid red;" bgcolor="{cycle values="#edeff0,#ffffff"}">
+                  <td align="center">{$list[mysec].name}
+                    <input type="hidden" value="{$list[mysec].name}" name="table_config[{$smarty.section.mysec.index}][name]"></td>
+                  <td align="center"><input type="text" value="{$list[mysec].comment}" name="table_config[{$smarty.section.mysec.index}][comment]"></td>
+                  <td align="center"><select name="table_config[{$smarty.section.mysec.index}][type]">
+						{html_options options=$types selected=$list[mysec].type}
+                    </select></td>
+                  <td align="center"><select name="table_config[{$smarty.section.mysec.index}][insert]">
+						{html_options options=$yesno selected=$list[mysec].insert}
+                    </select></td>
+                  <td align="center"><select name="table_config[{$smarty.section.mysec.index}][update]">
+						{html_options options=$yesno selected=$list[mysec].update}
+                    </select></td>
+                  <td align="center"><select name="table_config[{$smarty.section.mysec.index}][select]">
+						{html_options options=$yesno selected=$list[mysec].select}
+                    </select></td>
+                  <td align="center"><select name="table_config[{$smarty.section.mysec.index}][list]">
+						{html_options options=$yesno selected=$list[mysec].list}
+                    </select></td>
+                  <td align="center"><select name="table_config[{$smarty.section.mysec.index}][search]">
+						{html_options options=$yesno selected=$list[mysec].search}
+                    </select></td>
+                </tr>
+                {/section}
+                <tr><td align="center">编码</td>
+                	<td colspan="7"><select name="charset">
+                    {html_options options=$charsets selected=$charset}
+                    </select> 
+	                  <span class="style1">此处编码为数据的实际编码</span></td>
+                </tr>
+                 <tr><td align="center">强制更新</td>
+                	<td colspan="7"><input type="radio" style="border:none;width:10" name="overwrite" {if $overwrite}checked="checked"{/if} value="1" />是
+                	<input type="radio" name="overwrite" style="border:none;width:10" {if !$overwrite}checked="checked"{/if} value="0" />否
+                	 <span id="notice">(选中强制更新，将覆盖已生成的模板，慎重)</span>
+                	</td>
+                </tr>
+                <!--tr>
+                  <td align="center">覆盖</td>
+                  <td colspan="7">
+                  	<select name="flush">
+                  		<option value='1'>覆盖</option>
+                  		<option value='0'>不覆盖</option>
+                  	</select>(<span class="style1">选更新将更新模板文件</span>)
+                  	</td>
+                </tr-->
+            </table></td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+  <div align="center"><input type="submit" value="更新"></form>

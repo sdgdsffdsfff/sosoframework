@@ -1,0 +1,4 @@
+tocTab[tocTab.length] = new Array("18:1", "", "View", "EARoot/EA18/EA218.htm", "175.png", "79", "0", "", "Logical diagram");
+tocTab[tocTab.length] = new Array("18:2", "", "SOSO_View_Abstract", "EARoot/EA18/EA220.htm", "5.png", "334", "0", "", "Class");
+tocTab[tocTab.length] = new Array("18:3", "", "SOSO_View_Exception", "EARoot/EA18/EA221.htm", "5.png", "335", "0", "", "Class");
+tocTab[tocTab.length] = new Array("18:4", "", "SOSO_View_Page", "EARoot/EA18/EA222.htm", "5.png", "336", "0", "", "Class");

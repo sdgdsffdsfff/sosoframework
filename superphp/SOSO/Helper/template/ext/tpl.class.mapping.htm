@@ -1,0 +1,30 @@
+<?php
+/**
+ * @author moonzhang (zyfunny@gmail.com)
+ * @version v 1.0 {$date}
+ * @copyright 腾迅搜搜
+ * 
+ */
+class {$class_name} extends SOSO_ORM_TableObject {literal}{{/literal}
+{foreach item=row from=$properties}
+	/**
+	 * {$row.name}
+	 * Class Member Mapping to Table "{$table_name}" Field "{$row.name}"
+	 * 类的属性成员，指向 {$table_name} 表的 {$row.name} 字段
+	 * Refer to $this->mMapHash['{$row.name}'];
+	 * 指向 $this->mMapHash['{$row.name}'] 的同一变量;
+	 * @access public
+	 * @var {$row.Type}
+	*/
+	public ${$row.property};
+
+{/foreach}
+	/**
+	 * 构造函数
+	 * @access public
+	 */
+	public function __construct() {literal}{{/literal}
+		parent::__construct("{$table_name}",{$db_offset});
+	{literal}}
+}{/literal}
+?>

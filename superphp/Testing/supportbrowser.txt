@@ -1,0 +1,11 @@
+*chrome
+*konqueror
+*firefox
+*piiexplore
+*iehta
+*mock
+*opera
+*pifirefox
+*safari
+*iexplore
+*custom

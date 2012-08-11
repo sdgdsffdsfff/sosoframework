@@ -1,0 +1,6 @@
+tocTab[tocTab.length] = new Array("1:1", "", "Acl", "EARoot/EA1/EA39.htm", "175.png", "52", "0", "", "Logical diagram");
+tocTab[tocTab.length] = new Array("1:2", "", "SOSO_Acl_Exception", "EARoot/EA1/EA43.htm", "5.png", "207", "0", "", "Class");
+tocTab[tocTab.length] = new Array("1:3", "", "«interface» SOSO_Acl_Interface", "EARoot/EA1/EA44.htm", "8.png", "208", "0", "", "Interface");
+tocTab[tocTab.length] = new Array("1.1", "1", "Oss", "EARoot/EA1/EA41.htm", "4.png", "", "", "{8262E740-82A9-4468-BDA5-7D6FE3C02E72}", "Package");
+tocTab[tocTab.length] = new Array("1.2", "1", "Permission", "EARoot/EA1/EA42.htm", "4.png", "", "", "{24C77894-0F80-42ab-895B-7544464BAF70}", "Package");
+tocTab[tocTab.length] = new Array("1.3", "1", "Storage", "EARoot/EA1/EA45.htm", "4.png", "", "", "{93141C6C-6052-4b90-9AE0-E72291C9A033}", "Package");

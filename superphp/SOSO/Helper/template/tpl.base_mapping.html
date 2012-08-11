@@ -1,0 +1,48 @@
+<?php
+/**
+ * @author moonzhang (moonzhang@tencent.com)
+ * @version v1.0 {$date}
+ * @copyright 腾讯搜搜
+ * {$table_name}表基类({$charset})
+ */
+
+class Base_{$class_name} extends SOSO_ORM_Table/*Object*/ {literal}{{/literal}
+{foreach item=row from=$properties}
+	/**
+	 * {$row.Comment}
+	 * Class Member Mapping to Table "{$table_name}" Field "{$row.name}"
+	 * 类的属性成员，指向 {$table_name} 表的 {$row.name} 字段
+	 * Refer to $this->mMapHash['{$row.name}'];
+	 * 指向 $this->mMapHash['{$row.name}'] 的同一变量;
+	 * @access public
+	 * @var {$row.Type}
+	*/
+	public ${$row.property};
+
+{/foreach}
+	/**
+	 * 构造函数
+	 * @access public
+	 */
+	public function __construct($pTable="{$table_name}",$pIndex="{$db_offset}") {ldelim}
+		parent::__construct($pTable,$pIndex);
+	{rdelim}
+	
+	public function prepareHashMap(){ldelim}
+		$tFields = {$tableFieldHash};
+		
+		$this->tableFieldHash = array();
+		$this->primaryKey = $tFields['Primary'];
+		$this->autoKey = $tFields['auto'];
+		$this->charset = $tFields['charset'];
+		$columns = new ArrayObject(array_keys($tFields['Fields']));
+		foreach ($columns as $k=>$v){ldelim}
+			$key = $this->genKey($v);
+			$this->{ldelim}$key{rdelim} = &$this->hashMap[$v];
+			$field = $this->criteria->isIgnoreCase() ? strtolower($v) : $v;
+			$this->tableFieldHash[$field] = array('Column'=>$v)+$tFields['Fields'][$v];
+		{rdelim}
+		$this->mSQLCommand->setCharset($this->charset);
+	{rdelim}
+{rdelim}
+?>

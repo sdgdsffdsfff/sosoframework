@@ -1,0 +1,10 @@
+tocTab[tocTab.length] = new Array("8:1", "", "Controller", "EARoot/EA8/EA147.htm", "175.png", "68", "0", "", "Logical diagram");
+tocTab[tocTab.length] = new Array("8:2", "", "«interface» SOSO_Controller_Abstract", "EARoot/EA8/EA149.htm", "8.png", "275", "0", "", "Interface");
+tocTab[tocTab.length] = new Array("8:3", "", "SOSO_Controller_AJAX", "EARoot/EA8/EA150.htm", "5.png", "276", "0", "", "Class");
+tocTab[tocTab.length] = new Array("8:4", "", "SOSO_Controller_Cli", "EARoot/EA8/EA151.htm", "5.png", "277", "0", "", "Class");
+tocTab[tocTab.length] = new Array("8:5", "", "SOSO_Controller_Exception", "EARoot/EA8/EA152.htm", "5.png", "278", "0", "", "Class");
+tocTab[tocTab.length] = new Array("8:6", "", "SOSO_Controller_Front", "EARoot/EA8/EA153.htm", "5.png", "279", "0", "", "Class");
+tocTab[tocTab.length] = new Array("8:7", "", "SOSO_Controller_Http", "EARoot/EA8/EA154.htm", "5.png", "280", "0", "", "Class");
+tocTab[tocTab.length] = new Array("8:8", "", "SOSO_Controller_JSON", "EARoot/EA8/EA155.htm", "5.png", "281", "0", "", "Class");
+tocTab[tocTab.length] = new Array("8:9", "", "SOSO_Controller_PHP", "EARoot/EA8/EA156.htm", "5.png", "282", "0", "", "Class");
+tocTab[tocTab.length] = new Array("8:10", "", "SOSO_Controller_Service", "EARoot/EA8/EA157.htm", "5.png", "283", "0", "", "Class");

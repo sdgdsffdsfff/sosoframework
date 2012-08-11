@@ -1,0 +1,4 @@
+tocTab[tocTab.length] = new Array("11:1", "", "Frameworks", "EARoot/EA11/EA177.htm", "175.png", "72", "0", "", "Logical diagram");
+tocTab[tocTab.length] = new Array("11:2", "", "SOSO_Frameworks_Config", "EARoot/EA11/EA179.htm", "5.png", "300", "0", "", "Class");
+tocTab[tocTab.length] = new Array("11:3", "", "SOSO_Frameworks_Context", "EARoot/EA11/EA180.htm", "5.png", "301", "0", "", "Class");
+tocTab[tocTab.length] = new Array("11:4", "", "SOSO_Frameworks_Registry", "EARoot/EA11/EA181.htm", "5.png", "302", "0", "", "Class");

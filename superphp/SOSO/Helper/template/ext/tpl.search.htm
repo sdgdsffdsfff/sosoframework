@@ -1,0 +1,50 @@
+<div style="margin-left:15px">
+<div id="searchWrapper">
+<table cellSpacing="0" id="searchTbl" cellPadding="0" width="98%" align="left">
+    <td>{include file="ext/tpl.title.html"}
+      <table class="lcb" cellSpacing="0" cellPadding="5" width="100%" border="0">
+        <tr>
+          <td colspan="2"><form action="" method="get" name="form1" onsubmit="return sm(this);">
+              <table border="0" cellSpacing="0" cellPadding="0" width="100%">
+                {section name=rows loop=$config} {if $config[rows].search}
+                <tr>
+                  <td class='leftheader'>{$config[rows].comment}</td>
+                  <td>{include file=$config[rows].file}</td>
+                </tr>
+                {/if} {/section}
+                <tr>
+                  <td class='leftheader'>&#25805;&#20316;</td>
+                  <td align="center"><input type="submit" value="&#25628;&#32034;" id="submit">
+                    <input type="reset" value="&#37325;&#32622;" id="reset">
+                    <input type="hidden" name="_action" value="search"></td>
+                </tr>
+              </table>
+            </form></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+</div>
+</div>
+<script>
+{ldelim}literal{rdelim}
+if (widgets && widgets.resizeEle){ldelim}
+ widgets.resizeEle('searchWrapper',{ldelim}width:500,height:5+Ext.getDom('searchTbl').offsetHeight,maxWidth:Ext.getBody().dom.clientWidth*.95{rdelim});
+{rdelim}
+function sm(f){ldelim}
+  var e = [];
+  for (var i=0,len=f.elements.length;i<len;i++){ldelim}
+     var ele = f.elements[i];
+	 if (ele.name.length > 0 && 0 < ele.value.replace(/^\s+|\s+$/g,'').length){ldelim}
+	   e.push(String.format("{ldelim}0{rdelim}={ldelim}1{rdelim}",ele.name,ele.value));
+	 {rdelim}
+  {rdelim}
+  if (e.length > 0){ldelim}
+    location.href = "?"+e.join("&");
+  {rdelim}
+  return false;
+{rdelim}
+{ldelim}/literal{rdelim}
+</script>
+<br>
+{include file="ext/tpl.list.htm"} 

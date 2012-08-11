@@ -1,0 +1,4 @@
+tocTab[tocTab.length] = new Array("13:1", "", "Interface", "EARoot/EA13/EA186.htm", "175.png", "74", "0", "", "Logical diagram");
+tocTab[tocTab.length] = new Array("13:2", "", "«interface» SOSO_Interface_Observer", "EARoot/EA13/EA188.htm", "8.png", "307", "0", "", "Interface");
+tocTab[tocTab.length] = new Array("13:3", "", "«interface» SOSO_Interface_Runnable", "EARoot/EA13/EA189.htm", "8.png", "308", "0", "", "Interface");
+tocTab[tocTab.length] = new Array("13:4", "", "«interface» SOSO_Interface_Subject", "EARoot/EA13/EA190.htm", "8.png", "309", "0", "", "Interface");

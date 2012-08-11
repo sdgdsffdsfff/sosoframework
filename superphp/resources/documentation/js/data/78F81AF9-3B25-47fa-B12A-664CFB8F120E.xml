@@ -1,0 +1,4 @@
+tocTab[tocTab.length] = new Array("7:1", "", "Components", "EARoot/EA7/EA142.htm", "175.png", "67", "0", "", "Logical diagram");
+tocTab[tocTab.length] = new Array("7:2", "", "RemoteProxy", "EARoot/EA7/EA144.htm", "5.png", "271", "0", "", "Class");
+tocTab[tocTab.length] = new Array("7:3", "", "simple_html_dom_node", "EARoot/EA7/EA145.htm", "5.png", "272", "0", "", "Class");
+tocTab[tocTab.length] = new Array("7:4", "", "SimpleHtmlDom", "EARoot/EA7/EA146.htm", "5.png", "273", "0", "", "Class");

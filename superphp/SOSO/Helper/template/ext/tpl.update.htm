@@ -1,0 +1,37 @@
+<div style="margin-left:15px">
+<div id="updateWrapper">
+<table cellSpacing="0" cellPadding="0" align="center"  width="100%">
+	<form action="" method="post" enctype="multipart/form-data" name="form1">
+  <tr>
+    <td >{include file="ext/tpl.title.html"}</td>
+    </tr>
+    <tr>
+      <td><table class="lcb" cellSpacing="0" cellPadding="5" width="100%" border="0">
+          <tr>
+            <td><table border="0" cellSpacing="0" cellPadding="0" width="100%">
+                {section name=rows loop=$config} {if $config[rows].update}
+                <tr>
+                  <td class='leftheader'>{$config[rows].comment}</td>
+                  <td>{include file=$config[rows].file}</td>
+                </tr>
+                {/if} {/section}
+                <tr>
+                  <td class='leftheader'>&#25805;&#20316;</td>
+                  <td align="center"><input type="submit" value="&#26356;&#26032;" id="submit">
+                    <input type="reset" value="&#37325;&#32622;" id="reset"></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table></td>
+
+  </tr></form>
+</table>
+</div>
+</div>
+<script>
+{ldelim}literal{rdelim}
+if (widgets && widgets.resizeEle){ldelim}
+ widgets.resizeEle('updateWrapper',{ldelim}pinned:true,minWidth:580,height:5+Ext.getDom('updateWrapper').offsetHeight,maxWidth:Ext.getBody().dom.clientWidth*.95{rdelim});
+{rdelim}
+{ldelim}/literal{rdelim}
+</script>

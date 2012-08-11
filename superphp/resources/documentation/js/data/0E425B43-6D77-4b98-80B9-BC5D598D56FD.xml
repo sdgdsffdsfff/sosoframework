@@ -1,0 +1,4 @@
+tocTab[tocTab.length] = new Array("16:1", "", "Session", "EARoot/EA16/EA201.htm", "175.png", "77", "0", "", "Logical diagram");
+tocTab[tocTab.length] = new Array("16:2", "", "SOSO_Session_Database", "EARoot/EA16/EA203.htm", "5.png", "319", "0", "", "Class");
+tocTab[tocTab.length] = new Array("16:3", "", "SOSO_Session_Memcache", "EARoot/EA16/EA204.htm", "5.png", "320", "0", "", "Class");
+tocTab[tocTab.length] = new Array("16:4", "", "SOSO_Session_Storage", "EARoot/EA16/EA205.htm", "5.png", "321", "0", "", "Class");
